@@ -1,0 +1,82 @@
+
+1.0ahmedbenidar_testsonarJavaFrontend"1778331590638*java2.Bî
+W
+Rbackend/src/main/java/org/example/backend/exception/ResourceNotFoundException.java2
+	
+type3
+	
+MAIN4
+
+package6
+"
+org.example.backend.exception7
+<
+7org.example.backend.exception.ResourceNotFoundException9
+
+	exception10
+
+access11
+
+public12
+
+
+full-range13
+
+(3:1)-(7:2)14
+
+simple-name15
+
+ResourceNotFoundException16
+Y
+Sorg.example.backend.exception.ResourceNotFoundException#<init>(Ljava/lang/String;)V18
+
+method19
+
+(4:5)-(6:6)20
+
+calls21J
+
+1
+12
+
+
+3
+4 Z
+
+5
+5768j˜
+M
+17G
+171819 *
+1 (%28:5B$
+
+
+11
+12
+
+
+13
+20
+
+
+15
+16
+G
+8B
+8910 *
+1 (':5B$
+
+
+11
+12
+
+
+13
+14
+
+
+15
+16r
+
+17821*
+1 (%

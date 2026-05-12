@@ -124,14 +124,14 @@ const DOCTOR_PHOTOS = [
 ];
 
 const METADATA_POOL = [
-    { specialite: 'Ophtalmologiste',                        experience: '12 ans exp.', rating: 4.9, reviews: 120, lieu: 'Clinique Al Amal, Casablanca',       tarif: '1500' },
-    { specialite: 'Ophtalmologiste',                        experience: '18 ans exp.', rating: 4.8, reviews: 215, lieu: 'Centre de la Vision, Rabat',          tarif: '1600' },
-    { specialite: 'Ophtalmologiste · Spécialiste Rétine',   experience: '10 ans exp.', rating: 5.0, reviews: 89,  lieu: 'Clinique Universitaire, Marrakech',  tarif: '1700' },
-    { specialite: 'Ophtalmologiste · Chirurgie Réfractive', experience: '15 ans exp.', rating: 4.7, reviews: 67,  lieu: 'Centre Laser Vision, Fès',            tarif: '2000' },
-    { specialite: 'Ophtalmologiste · Glaucome',             experience: '8 ans exp.',  rating: 4.9, reviews: 143, lieu: 'Polyclinique du Parc, Agadir',        tarif: '1450' },
-    { specialite: 'Ophtalmologiste · Pédiatrique',          experience: '20 ans exp.', rating: 4.6, reviews: 312, lieu: 'CHU Ibn Rochd, Casablanca',           tarif: '1550' },
-    { specialite: 'Ophtalmologiste',                        experience: '6 ans exp.',  rating: 4.8, reviews: 54,  lieu: 'Cabinet Médical Ryad, Meknès',       tarif: '1350' },
-    { specialite: 'Ophtalmologiste · Urgences Oculaires',   experience: '14 ans exp.', rating: 4.7, reviews: 198, lieu: 'Clinique Al Inbiath, Tanger',         tarif: '1800' },
+    { specialite: 'Ophtalmologiste',                        experience: '12 ans exp.', rating: 4.9, reviews: 120, lieu: 'Cabinet ŒilDirect, Marrakech',       tarif: '350' },
+    { specialite: 'Ophtalmologiste',                        experience: '18 ans exp.', rating: 4.8, reviews: 215, lieu: 'Cabinet ŒilDirect, Marrakech',          tarif: '400' },
+    { specialite: 'Ophtalmologiste · Spécialiste Rétine',   experience: '10 ans exp.', rating: 5.0, reviews: 89,  lieu: 'Cabinet ŒilDirect, Marrakech',  tarif: '450' },
+    { specialite: 'Ophtalmologiste · Chirurgie Réfractive', experience: '15 ans exp.', rating: 4.7, reviews: 67,  lieu: 'Cabinet ŒilDirect, Marrakech',            tarif: '600' },
+    { specialite: 'Ophtalmologiste · Glaucome',             experience: '8 ans exp.',  rating: 4.9, reviews: 143, lieu: 'Cabinet ŒilDirect, Marrakech',        tarif: '300' },
+    { specialite: 'Ophtalmologiste · Pédiatrique',          experience: '20 ans exp.', rating: 4.6, reviews: 312, lieu: 'Cabinet ŒilDirect, Marrakech',           tarif: '380' },
+    { specialite: 'Ophtalmologiste',                        experience: '6 ans exp.',  rating: 4.8, reviews: 54,  lieu: 'Cabinet ŒilDirect, Marrakech',       tarif: '320' },
+    { specialite: 'Ophtalmologiste · Urgences Oculaires',   experience: '14 ans exp.', rating: 4.7, reviews: 198, lieu: 'Cabinet ŒilDirect, Marrakech',         tarif: '550' },
 ];
 
 const MOTIFS = [

@@ -1,0 +1,71 @@
+
+lorg.example.backend.service.MessageService#getConversation(Ljava/lang/Long;Ljava/lang/Long;)Ljava/util/List;O
+Ebackend\src\main\java\org\example\backend\service\MessageService.java& &(("1*Ã
+1' '(.¶
+³
+' '(.:
+%04org.example.backend.repository.UtilisateurRepository"__id*e
+
+__unknown_file (I*G,
+*org.example.backend.service.MessageService"
+utilisateurRepositoryƒ
+€
+( ((g
+%1"__declareFunction*[
+
+__unknown_file (?=
+;__sonar_lambda_9$org.example.backend.service.MessageServicec
+a
+' ((i+
+u1%org.example.backend.model.Utilisateur"__id*"
+
+__unknown_file (
+""¶
+³
+) )(.:
+%34org.example.backend.repository.UtilisateurRepository"__id*e
+
+__unknown_file (I*G,
+*org.example.backend.service.MessageService"
+utilisateurRepository„
+
+* *(g
+%4"__declareFunction*\
+
+__unknown_file (@>
+<__sonar_lambda_10$org.example.backend.service.MessageServicec
+a
+) *(i+
+u2%org.example.backend.model.Utilisateur"__id*"
+
+__unknown_file (
+""®
+«
++ +( 6
+%60org.example.backend.repository.MessageRepository"__id*a
+
+__unknown_file (E*C,
+*org.example.backend.service.MessageService"
+messageRepository•’
++ +(9
+%7java.util.List"¡org.example.backend.repository.MessageRepository#findConversation(Lorg/example/backend/model/Utilisateur;Lorg/example/backend/model/Utilisateur;)Ljava/util/List;*T
+
+__unknown_file (8
+6
+%60org.example.backend.repository.MessageRepository*I
+
+__unknown_file (-
++
+u1%org.example.backend.model.Utilisateur*I
+
+__unknown_file (-
++
+u2%org.example.backend.model.Utilisateur2`findConversation(Lorg/example/backend/model/Utilisateur;Lorg/example/backend/model/Utilisateur;)""
++ +(:
+
+%7java.util.List:%
+&) &(6
+userId1java.lang.Long:%
+&7 &(C
+userId2java.lang.LongB.,
+*org.example.backend.service.MessageServiceH

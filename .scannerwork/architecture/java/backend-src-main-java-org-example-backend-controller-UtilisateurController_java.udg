@@ -1,0 +1,671 @@
+
+1.0ahmedbenidar_testsonarJavaFrontend"1778331591351*java2.Bž
+T
+Obackend/src/main/java/org/example/backend/controller/UtilisateurController.java2
+	
+type3
+	
+MAIN4
+
+package6
+#
+org.example.backend.controller7
+9
+4org.example.backend.controller.UtilisateurController9
+
+class10
+
+access11
+
+public12
+
+
+full-range13
+
+(19:1)-(139:2)14
+
+simple-name15
+
+UtilisateurController16
+
+RestController18
+
+unknown19
+
+annotated by20
+,
+&Recovered#typeBindingLRestController;022
+
+
+uses23
+
+RequestMapping25
+,
+&Recovered#typeBindingLRequestMapping;027
+
+RequiredArgsConstructor29
+5
+/Recovered#typeBindingLRequiredArgsConstructor;031
+P
+Jorg.example.backend.controller.UtilisateurController.utilisateurRepository33
+
+field34
+
+private35
+
+(24:5)-(24:63)36
+
+utilisateurRepository37
+:
+4org.example.backend.repository.UtilisateurRepository39
+
+is type40
+G
+Aorg.example.backend.controller.UtilisateurController.objectMapper42
+
+(25:5)-(25:73)43
+
+objectMapper44
+
+ObjectMapper46
+f
+`org.example.backend.controller.UtilisateurController#getProfil(Ljava/lang/Long;)LResponseEntity;48
+
+method49
+
+(27:5)-(33:6)50
+
+	getProfil51
+
+ResponseEntity53
+
+returns54
+
+
+GetMapping56
+(
+"Recovered#typeBindingLGetMapping;058
+
+PathVariable60
+*
+$Recovered#typeBindingLPathVariable;062
++
+%org.example.backend.model.Utilisateur64
+
+
+references65
+‚
+|org.example.backend.controller.UtilisateurController#buildProfileMap(Lorg/example/backend/model/Utilisateur;)Ljava/util/Map;67
+
+calls68
+x
+rorg.example.backend.controller.UtilisateurController#updateProfil(Ljava/lang/Long;Ljava/util/Map;)LResponseEntity;70
+
+(35:5)-(66:6)71
+
+updateProfil72
+
+
+PutMapping74
+(
+"Recovered#typeBindingLPutMapping;076
+
+RequestBody78
+)
+#Recovered#typeBindingLRequestBody;080
+i
+corg.example.backend.controller.UtilisateurController#asString(Ljava/lang/Object;)Ljava/lang/String;82
+k
+eorg.example.backend.controller.UtilisateurController#asInteger(Ljava/lang/Object;)Ljava/lang/Integer;84
+t
+norg.example.backend.controller.UtilisateurController#serializeJsonOrNull(Ljava/lang/Object;)Ljava/lang/String;86
+
+(68:5)-(84:6)87
+
+buildProfileMap88
+
+	has param89
+o
+iorg.example.backend.controller.UtilisateurController#parseJsonIntList(Ljava/lang/String;)Ljava/util/List;91
+r
+lorg.example.backend.controller.UtilisateurController#parseJsonStringList(Ljava/lang/String;)Ljava/util/List;93
+
+(86:5)-(95:6)94
+
+serializeJsonOrNull95
+
+(97:5)-(108:6)96
+
+parseJsonIntList97
+<
+6org.example.backend.controller.UtilisateurController$199
+
+	protected100
+
+(102:98)-(103:14)101
+
+(110:5)-(120:6)102
+
+parseJsonStringList103
+=
+6org.example.backend.controller.UtilisateurController$2105
+
+(115:83)-(116:14)106
+
+(122:5)-(126:6)107
+
+asString108
+
+(128:5)-(138:6)109
+
+	asInteger110J
+
+1
+12
+
+
+3
+4 Z
+
+5
+5768jÞ
+
+O
+81I
+818249 *
+1z z(28:5B&
+
+
+11
+35
+
+13
+107
+
+15
+108
+
+21
+212219
+M
+47G
+474849 *
+1 ('28:5B$
+
+
+11
+12
+
+
+13
+50
+
+
+15
+51
+
+17
+171819
+
+61
+616219
+M
+66G
+666749 *
+1D! D(028:5B$
+
+
+11
+35
+
+
+13
+87
+
+
+15
+88
+
+30
+303119
+Q
+83K
+838449 *
+1€ €(28:5B&
+
+
+11
+35
+
+13
+109
+
+15
+110
+G
+104@
+10410510 *
+1sS t(292:5B
+
+11
+100
+
+13
+106
+
+24
+242519
+D
+98>
+989910 *
+1fb g(290:5B
+
+11
+100
+
+13
+101
+G
+8B
+8910 *
+1 (#:5B$
+
+
+11
+12
+
+
+13
+14
+
+
+15
+16
+O
+92I
+929349 *
+1n n(-28:5B&
+
+
+11
+35
+
+13
+102
+
+15
+103
+M
+85G
+858649 *
+1V V('28:5B$
+
+
+11
+35
+
+
+13
+94
+
+
+15
+95
+M
+41G
+414234 *
+1' (328:5B$
+
+
+11
+35
+
+
+13
+43
+
+
+15
+44
+
+26
+262719
+
+57
+575819
+
+45
+454619
+
+77
+777819
+
+75
+757619
+
+28
+282919
+
+79
+798019
+
+52
+525319
+
+55
+555619
+
+63
+636419
+M
+69G
+697049 *
+1$ $(*28:5B$
+
+
+11
+12
+
+
+13
+71
+
+
+15
+72
+
+38
+383919
+
+73
+737419
+M
+32G
+323334 *
+1) (>28:5B$
+
+
+11
+35
+
+
+13
+36
+
+
+15
+37
+
+59
+596019
+M
+90G
+909149 *
+1a a(+28:5B$
+
+
+11
+35
+
+
+13
+96
+
+
+15
+97rá
+
+81720*
+1 (
+
+82123*
+1 (
+
+82420*
+1 (%
+
+82623*
+1 (
+
+82820*
+1 (
+
+83023*
+1 (
+
+323840*
+1 ((
+
+323823*
+1 ((
+
+323823*
+1) (>
+
+414540*
+1 (&
+
+414523*
+1 (&
+
+414523*
+1' (3
+
+475254*
+1 (
+
+475520*
+1 (
+
+475723*
+1 (
+
+475223*
+1 (
+
+475920*
+1( (5
+
+476123*
+1) (5
+
+476340*
+1 (
+
+476323*
+1	 (
+
+473265*
+1 (.
+
+473823*
+1 (.
+
+473265*
+1 (.
+
+47865*
+1 "  (1
+
+476668*
+1 "  (1
+
+695254*
+1$ $(
+
+697320*
+1# #(
+
+697523*
+1# #(
+
+695223*
+1$ $(
+
+695920*
+1$+ $(8
+
+696123*
+1$, $(8
+
+697720*
+1$B $(N
+
+697923*
+1$C $(N
+
+696340*
+1% %(
+
+696323*
+1%	 %(
+
+693265*
+1% %(.
+
+693823*
+1% %(.
+
+693265*
+1% %(.
+
+69865*
+1(/ ((7
+
+698168*
+1(/ ((7
+
+69865*
+1)5 )(=
+
+698168*
+1)5 )(=
+
+69865*
+1*3 *(;
+
+698168*
+1*3 *(;
+
+69865*
+1+/ +(8
+
+698368*
+1+/ +(8
+
+69865*
+1,; ,(C
+
+698168*
+1,; ,(C
+
+69865*
+1-/ -(7
+
+698168*
+1-/ -(7
+
+69865*
+1.= .(E
+
+698168*
+1.= .(E
+
+69865*
+10 0( 
+
+698168*
+10 0( 
+
+69865*
+17) 7(<
+
+698568*
+17) 7(<
+
+69865*
+1:  :(3
+
+698568*
+1:  :(3
+
+69865*
+1=# =(6
+
+698568*
+1=# =(6
+
+696340*
+1@ @(
+
+696323*
+1@	 @(
+
+693265*
+1@ @(2
+
+693823*
+1@ @(2
+
+693265*
+1@ @(2
+
+69865*
+1A" A(1
+
+696668*
+1A" A(1
+
+666389*
+1D1 D(<
+
+666340*
+1D= D(>
+
+666323*
+1D1 D(<
+
+66865*
+1P) P(9
+
+669068*
+1P) P(9
+
+66865*
+1Q  Q(3
+
+669268*
+1Q  Q(3
+
+66865*
+1R# R(6
+
+669268*
+1R# R(6
+
+854165*
+1[ [( 
+
+854523*
+1[ [( 
+
+854165*
+1[ [( 
+
+904165*
+1f" f(.
+
+904523*
+1f" f(.
+
+904165*
+1f" f(.
+
+924165*
+1s s( 
+
+924523*
+1s s( 
+
+924165*
+1s s( 

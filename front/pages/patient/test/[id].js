@@ -77,6 +77,7 @@ export default function TestVisuel() {
     const validTimeRef = useRef(null);
     const correctAnswersRef = useRef(0);
     const gestureTimerRef = useRef(null);
+    const gestureClearDebounceRef = useRef(null);
     const isProcessingRef = useRef(false);
     const currentStepRef = useRef(0);
     const statusRef = useRef('INITIALIZING');
@@ -108,6 +109,8 @@ export default function TestVisuel() {
     const setStatusS = s => { statusRef.current = s; setStatus(s); };
 
     const countdownSpeechDoneRef = useRef(false);
+    /** Au moins une analyse lunettes terminée en phase calibrage (évite d’annoncer trop tôt). */
+    const calibrationGlassesCheckDoneRef = useRef(false);
     const lastDistancePausedRef = useRef(false);
 
     const speak = (text) => {
@@ -118,6 +121,10 @@ export default function TestVisuel() {
         utterance.rate = 0.88;
         utterance.pitch = 1;
         window.speechSynthesis.speak(utterance);
+    };
+
+    const cancelSpeech = () => {
+        if (typeof window !== 'undefined' && window.speechSynthesis) window.speechSynthesis.cancel();
     };
 
     const TARGET_EYE = 70, TOL = 15;
@@ -177,13 +184,13 @@ export default function TestVisuel() {
             tmp.width = 96; tmp.height = 32;
             const ctx = tmp.getContext('2d');
             ctx.drawImage(videoRef.current, startX, startY, boxW, boxH, 0, 0, 96, 32);
-            const base64 = tmp.toDataURL('image/jpeg', 0.9);
+            const base64 = tmp.toDataURL('image/jpeg', 0.72);
 
             const res = await fetch('http://localhost:5001/detect-glasses', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ image: base64 }),
-                signal: AbortSignal.timeout(1500)
+                signal: AbortSignal.timeout(800)
             });
             if (!res.ok) throw new Error('API failed');
             const data = await res.json();
@@ -208,6 +215,9 @@ export default function TestVisuel() {
         } catch (e) {
             console.warn('OpenCV API unavailable or error:', e.message);
         } finally {
+            if (statusRef.current === 'CALIBRATING' || statusRef.current === 'READY') {
+                calibrationGlassesCheckDoneRef.current = true;
+            }
             glassCheckBusy.current = false;
         }
     };
@@ -283,7 +293,10 @@ export default function TestVisuel() {
             const g = hasGlassesRef.current;
             ctx.strokeStyle = (ok && !g) ? '#10b981' : '#ef4444'; ctx.lineWidth = 3;
             ctx.strokeRect(le.x * canvas.width - 20, le.y * canvas.height - 20, d + 40, 40);
-            if (ok && !g) {
+
+            const calibrationVoiceOk = ok && !g && calibrationGlassesCheckDoneRef.current;
+
+            if (calibrationVoiceOk) {
                 if (statusRef.current === 'CALIBRATING') setStatusS('READY');
                 if (statusRef.current === 'READY') {
                     if (!validTimeRef.current) {
@@ -299,14 +312,17 @@ export default function TestVisuel() {
                     }
                 }
             } else {
+                cancelSpeech();
                 validTimeRef.current = null; setCountdown(null);
                 countdownSpeechDoneRef.current = false;
                 if (statusRef.current === 'READY') setStatusS('CALIBRATING');
             }
         } else {
+            cancelSpeech();
             setDistanceMsg('Visage non détecté.'); setIsDistanceOk(false); setHasGlasses(false);
             setCameraAngle(null);
             validTimeRef.current = null; setCountdown(null);
+            countdownSpeechDoneRef.current = false;
             if (statusRef.current === 'READY') setStatusS('CALIBRATING');
         }
         ctx.restore();
@@ -318,7 +334,7 @@ export default function TestVisuel() {
         const base = lm[2];
         const dx = tip.x - base.x;
         const dy = tip.y - base.y;
-        const minDist = 0.04;
+        const minDist = 0.017;
         if (Math.abs(dx) < minDist && Math.abs(dy) < minDist) return null;
         if (Math.abs(dy) > Math.abs(dx)) {
             return dy < 0 ? 'up' : 'down';
@@ -333,6 +349,24 @@ export default function TestVisuel() {
         ctx.save(); ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.drawImage(results.image, 0, 0, canvas.width, canvas.height);
 
+        const flushGestureClearDebounce = () => {
+            if (gestureClearDebounceRef.current) {
+                clearTimeout(gestureClearDebounceRef.current);
+                gestureClearDebounceRef.current = null;
+            }
+        };
+        const scheduleGestureClear = () => {
+            flushGestureClearDebounce();
+            gestureClearDebounceRef.current = setTimeout(() => {
+                gestureClearDebounceRef.current = null;
+                setDetGesture(null);
+                if (gestureTimerRef.current) {
+                    clearTimeout(gestureTimerRef.current);
+                    gestureTimerRef.current = null;
+                }
+            }, 200);
+        };
+
         const hands = results.multiHandLandmarks || [];
         if (hands.length > 0 && !isProcessingRef.current) {
             const lm = hands[0];
@@ -344,34 +378,47 @@ export default function TestVisuel() {
             const wristY = lm[0].y;
             setHandDebug(`poignet Y=${wristY.toFixed(2)} | direction=${dir || '—'}`);
 
-            // Only process gesture if distance is OK and not paused by glasses
             const canProcess = !testPausedRef.current && isDistanceOkRef.current;
-            if (dir && wristY < 0.8 && canProcess) {
+            // Poignet un peu plus bas accepté ; évite les coupures courtes du tracking
+            if (dir && wristY < 0.96 && canProcess) {
+                flushGestureClearDebounce();
                 setDetGesture(dir);
                 if (!gestureTimerRef.current) {
                     gestureTimerRef.current = setTimeout(() => {
                         gestureTimerRef.current = null;
                         processGesture(dir);
-                    }, 500);
+                    }, 400);
                 }
             } else {
-                setDetGesture(null);
-                if (gestureTimerRef.current) { clearTimeout(gestureTimerRef.current); gestureTimerRef.current = null; }
+                scheduleGestureClear();
             }
         } else {
-            setHandDebug('Aucune main visible'); setDetGesture(null);
-            if (gestureTimerRef.current) { clearTimeout(gestureTimerRef.current); gestureTimerRef.current = null; }
+            setHandDebug('Aucune main visible');
+            scheduleGestureClear();
         }
         ctx.restore();
     };
 
     const processGesture = dir => {
         if (isProcessingRef.current) return;
+        if (gestureClearDebounceRef.current) {
+            clearTimeout(gestureClearDebounceRef.current);
+            gestureClearDebounceRef.current = null;
+        }
         isProcessingRef.current = true;
         const step = sequence[currentStepRef.current];
         const correct = dir === step.direction;
         if (correct) correctAnswersRef.current += 1;
         setStepResult(correct ? 'correct' : 'wrong');
+
+        // Après chaque réponse : pause 4 s avant la question suivante (+ message vocal)
+        const pauseMs = 4000;
+        if (correct) {
+            speak('Bonne réponse. Continuez.');
+        } else {
+            speak('Pas la bonne réponse. Question suivante.');
+        }
+
         setTimeout(() => {
             setStepResult(null); setDetGesture(null); isProcessingRef.current = false;
             const next = currentStepRef.current + 1;
@@ -380,7 +427,7 @@ export default function TestVisuel() {
             } else {
                 endTest(correctAnswersRef.current);
             }
-        }, 700);
+        }, pauseMs);
     };
 
     const startTest = () => {
@@ -399,8 +446,10 @@ export default function TestVisuel() {
         if (!window.Hands || !window.Camera || !videoRef.current) { setTimeout(initHands, 400); return; }
         const h = new window.Hands({ locateFile: f => `https://cdn.jsdelivr.net/npm/@mediapipe/hands@0.4.1646424915/${f}` });
         h.setOptions({
-            maxNumHands: 1, modelComplexity: 0,
-            minDetectionConfidence: 0.55, minTrackingConfidence: 0.45
+            maxNumHands: 1,
+            modelComplexity: 1,
+            minDetectionConfidence: 0.32,
+            minTrackingConfidence: 0.28
         });
         h.onResults(onHandResults); handsRef.current = h;
 
@@ -409,15 +458,16 @@ export default function TestVisuel() {
             const faceCam = new window.Camera(videoRef.current, {
                 onFrame: async () => {
                     frameCountRef.current++;
+                    const n = frameCountRef.current;
                     if (handsRef.current && statusRef.current === 'TESTING')
                         await handsRef.current.send({ image: videoRef.current });
-                    // FaceMesh every 45 frames for distance check during test
-                    if (frameCountRef.current % 45 === 0 && faceRef.current && statusRef.current === 'TESTING')
+                    // Distance / lunettes : moins souvent pour garder les mains fluides
+                    if (n % 84 === 0 && faceRef.current && statusRef.current === 'TESTING')
                         await faceRef.current.send({ image: videoRef.current });
-                    // ML glasses check every 90 frames
-                    if (frameCountRef.current % 90 === 0) checkGlassesML();
+                    if (n % 140 === 0) checkGlassesML();
                 },
-                width: 320, height: 240
+                width: 640,
+                height: 480
             });
             cameraRef.current = faceCam; faceCam.start();
         } else {
@@ -426,10 +476,11 @@ export default function TestVisuel() {
                     frameCountRef.current++;
                     if (statusRef.current === 'TESTING') {
                         if (handsRef.current) await handsRef.current.send({ image: videoRef.current });
-                        if (frameCountRef.current % 90 === 0) checkGlassesML();
+                        if (frameCountRef.current % 140 === 0) checkGlassesML();
                     }
                 },
-                width: 320, height: 240
+                width: 640,
+                height: 480
             });
             cameraRef.current = cam; cam.start();
         }
@@ -485,7 +536,7 @@ export default function TestVisuel() {
                     frameCountRef.current++;
                     if (faceRef.current && (statusRef.current === 'CALIBRATING' || statusRef.current === 'READY'))
                         await faceRef.current.send({ image: videoRef.current });
-                    if (frameCountRef.current % 30 === 0) checkGlassesML();
+                    if (frameCountRef.current % 48 === 0) checkGlassesML();
                 },
                 width: 320, height: 240
             });
@@ -497,6 +548,10 @@ export default function TestVisuel() {
             if (faceRef.current) try { faceRef.current.close(); } catch (e) { }
             if (handsRef.current) try { handsRef.current.close(); } catch (e) { }
             if (gestureTimerRef.current) clearTimeout(gestureTimerRef.current);
+            if (gestureClearDebounceRef.current) {
+                clearTimeout(gestureClearDebounceRef.current);
+                gestureClearDebounceRef.current = null;
+            }
         };
     }, []);
 

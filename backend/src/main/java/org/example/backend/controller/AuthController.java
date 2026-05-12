@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
+import java.util.Objects;
 import java.util.Optional;
 
 @RestController
@@ -21,14 +22,14 @@ public class AuthController {
     @PostMapping("/inscription")
     public ResponseEntity<?> inscription(@RequestBody Map<String, String> body) {
         String nom = body.get("nom");
-        String email = body.get("email");
-        String motDePasse = body.get("motDePasse");
+        String email = normalizeEmail(body.get("email"));
+        String motDePasse = normalizePassword(body.get("motDePasse"));
 
-        if (nom == null || email == null || motDePasse == null) {
+        if (nom == null || email == null || email.isEmpty() || motDePasse == null) {
             return ResponseEntity.badRequest().body(Map.of("erreur", "Champs manquants"));
         }
 
-        if (utilisateurRepository.findByEmail(email).isPresent()) {
+        if (utilisateurRepository.findByEmailIgnoreCase(email).isPresent()) {
             return ResponseEntity.status(HttpStatus.CONFLICT)
                     .body(Map.of("erreur", "Un compte avec cet email existe déjà."));
         }
@@ -46,16 +47,30 @@ public class AuthController {
 
     @PostMapping("/connexion")
     public ResponseEntity<?> connexion(@RequestBody Map<String, String> body) {
-        String email = body.get("email");
-        String motDePasse = body.get("motDePasse");
+        String email = normalizeEmail(body.get("email"));
+        String motDePasse = normalizePassword(body.get("motDePasse"));
 
-        Optional<Utilisateur> utilisateur = utilisateurRepository.findByEmail(email);
+        if (email == null || email.isEmpty() || motDePasse == null) {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
+                    .body(Map.of("erreur", "Email ou mot de passe incorrect."));
+        }
 
-        if (utilisateur.isEmpty() || !utilisateur.get().getMotDePasse().equals(motDePasse)) {
+        Optional<Utilisateur> utilisateur = utilisateurRepository.findByEmailIgnoreCase(email);
+
+        String stored = utilisateur.map(Utilisateur::getMotDePasse).orElse(null);
+        if (utilisateur.isEmpty() || !Objects.equals(stored, motDePasse)) {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
                     .body(Map.of("erreur", "Email ou mot de passe incorrect."));
         }
 
         return ResponseEntity.ok(utilisateur.get());
+    }
+
+    private static String normalizeEmail(String email) {
+        return email == null ? null : email.trim().toLowerCase();
+    }
+
+    private static String normalizePassword(String password) {
+        return password == null ? null : password.trim();
     }
 }

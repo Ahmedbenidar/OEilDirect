@@ -1,0 +1,213 @@
+
+Xorg.example.backend.service.PatientService#genererRecommandationsIA(I)Ljava/lang/String;O
+Ebackend\src\main\java\org\example\backend\service\PatientService.javas s(+"7*½
+2| |(%k
+i
+| |(+
+%12java.lang.String"__concat* 
+| |(%
+Vision moyenne (*
+|( |(+
+
+
+n10intw
+u
+| |(?
+%13java.lang.String"__concat*%
+| |(+
+
+%12java.lang.String*
+|. |(?
+/10). Resultat r
+p
+| |(G
+%14java.lang.String"__concat*%
+| |(?
+
+%13java.lang.String*
+|B |(G
+
+scoreint«
+¨
+	| |(Œ
+%15java.lang.String"__concat*%
+| |(G
+
+%14java.lang.String*Q
+	|J |(ŒDB
+@/15 au test. Fatigue visuelle possible. Consultation conseillee."&
+	| |(
+
+%15java.lang.String*€
+3{ {(i
+g
+{ {(
+%11boolean"	__compare*
+{ {(
+>=*
+{ {(
+
+scoreint*
+{ {(2*
+2
+1*·
+4y y(#h
+f
+y y()
+%7java.lang.String"__concat*
+y y(#
+Bonne vision (*
+y& y()
+
+
+n10intu
+s
+y y(=
+%8java.lang.String"__concat*$
+y y()
+
+%7java.lang.String*
+y, y(=
+/10). Resultat p
+n
+y y(E
+%9java.lang.String"__concat*$
+y y(=
+
+%8java.lang.String*
+y@ y(E
+
+scoreint¬
+©
+	y y(Œ
+%10java.lang.String"__concat*$
+y y(E
+
+%9java.lang.String*S
+	yH y(ŒFD
+B/15 au test. Consultation ophtalmologique conseillee si symptomes."&
+	y y(
+
+%10java.lang.String*
+5x x(h
+f
+x x(
+%6boolean"	__compare*
+x x(
+>=*
+x x(
+
+scoreint*
+x x(2
+*
+3
+4*Â
+6v v((m
+k
+v v(.
+%2java.lang.String"__concat*#
+v v((
+Vision excellente (*
+v+ v(.
+
+
+n10intu
+s
+v v(B
+%3java.lang.String"__concat*$
+v v(.
+
+%2java.lang.String*
+v1 v(B
+/10). Resultat p
+n
+v v(J
+%4java.lang.String"__concat*$
+v v(B
+
+%3java.lang.String*
+vE v(J
+
+scoreint³
+°
+	v v(™
+%5java.lang.String"__concat*$
+v v(J
+
+%4java.lang.String*[
+	vM v(™NL
+J/15 au test. Aucune correction necessaire. Controle recommande dans 2 ans."%
+	v v(š
+
+%5java.lang.String*›
+7t t(!Ð
+Í
+t t((	
+%0int">org.example.backend.service.PatientService#noteSur10PourIA(I)I*J
+
+__unknown_file (.",
+*org.example.backend.service.PatientService**
+
+__unknown_file (
+
+scoreintG
+E
+t t()
+
+n10int"__id*'
+
+__unknown_file (
+	
+%0inth
+f
+u u(
+%1boolean"	__compare*
+u u(
+>=*
+u u(
+
+scoreint*
+u u(2*
+5
+6*¾
+1~ ~( j
+h
+~ ~(&
+%16java.lang.String"__concat*
+~ ~( 
+Vision faible (*
+~# ~(&
+
+
+n10intw
+u
+~ ~(:
+%17java.lang.String"__concat*%
+~ ~(&
+
+%16java.lang.String*
+~) ~(:
+/10). Resultat r
+p
+~ ~(B
+%18java.lang.String"__concat*%
+~ ~(:
+
+%17java.lang.String*
+~= ~(B
+
+scoreint­
+ª
+	~ ~(‰
+%19java.lang.String"__concat*%
+~ ~(B
+
+%18java.lang.String*S
+	~E ~(‰FD
+B/15 au test. Correction optique recommandee. Consultation urgente."&
+	~ ~(Š
+
+%19java.lang.String:
+s, s(5
+scoreintB.,
+*org.example.backend.service.PatientService

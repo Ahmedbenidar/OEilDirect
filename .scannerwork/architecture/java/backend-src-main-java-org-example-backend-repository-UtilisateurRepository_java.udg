@@ -1,0 +1,161 @@
+
+1.0ahmedbenidar_testsonarJavaFrontend"1778331592226*java2.Bˆ
+T
+Obackend/src/main/java/org/example/backend/repository/UtilisateurRepository.java2
+	
+type3
+	
+MAIN4
+
+package6
+#
+org.example.backend.repository7
+9
+4org.example.backend.repository.UtilisateurRepository9
+
+	interface10
+
+access11
+
+public12
+
+
+full-range13
+
+(9:1)-(14:2)14
+
+simple-name15
+
+UtilisateurRepository16
++
+%Recovered#typeBindingLJpaRepository;018
+
+unknown19
+
+
+implements20
+
+
+Repository22
+
+annotated by23
+(
+"Recovered#typeBindingLRepository;025
+
+
+uses26
++
+%org.example.backend.model.Utilisateur28
+n
+horg.example.backend.repository.UtilisateurRepository#findByEmail(Ljava/lang/String;)Ljava/util/Optional;30
+
+method31
+
+(11:5)-(11:53)32
+
+findByEmail33
+x
+rorg.example.backend.repository.UtilisateurRepository#findByEmailIgnoreCase(Ljava/lang/String;)Ljava/util/Optional;35
+
+(13:5)-(13:63)36
+
+findByEmailIgnoreCase37J
+
+1
+12
+
+
+3
+4 Z
+
+5
+5768j·
+
+17
+171819
+
+21
+212219
+
+27
+272819
+M
+29G
+293031 *
+1 (&28:5B$
+
+
+11
+12
+
+
+13
+32
+
+
+15
+33
+G
+8B
+8910 *
+1
+ 
+(':5B$
+
+
+11
+12
+
+
+13
+14
+
+
+15
+16
+M
+34G
+343531 *
+1 (028:5B$
+
+
+11
+12
+
+
+13
+36
+
+
+15
+37
+
+24
+242519r¸
+
+81720*
+1
+0 
+(P
+
+82123*
+1	 	(
+
+82426*
+1	 	(
+
+81726*
+1
+0 
+(=
+
+82726*
+1
+> 
+(I
+
+292726*
+1 (
+
+342726*
+1 (

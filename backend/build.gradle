@@ -2,6 +2,7 @@ plugins {
     id 'java'
     id 'org.springframework.boot' version '4.0.3'
     id 'io.spring.dependency-management' version '1.1.7'
+    id 'jacoco'
 }
 
 group = 'org.example'
@@ -27,10 +28,52 @@ dependencies {
     testCompileOnly 'org.projectlombok:lombok'
     testAnnotationProcessor 'org.projectlombok:lombok'
     runtimeOnly 'com.mysql:mysql-connector-j'
+    runtimeOnly 'com.h2database:h2'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.springframework.boot:spring-boot-starter-webmvc-test'
+    testImplementation 'org.seleniumhq.selenium:selenium-java:4.29.0'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    testRuntimeOnly 'com.h2database:h2'
 }
 
 tasks.named('test') {
     useJUnitPlatform()
+    testLogging {
+        events 'failed'
+        exceptionFormat 'full'
+        showStandardStreams = false
+        showStackTraces = true
+    }
+    // PASSED en vert, FAILED en rouge (ANSI — fonctionne avec Windows Terminal / PowerShell récent)
+    afterTest { desc, result ->
+        def reset = '\u001B[0m'
+        def green = '\u001B[32m'
+        def red = '\u001B[31m'
+        def yellow = '\u001B[33m'
+        def rt = result.resultType
+        def label = rt == org.gradle.api.tasks.testing.TestResult.ResultType.SUCCESS ? 'PASSED'
+                : rt == org.gradle.api.tasks.testing.TestResult.ResultType.FAILURE ? 'FAILED'
+                : rt.name()
+        def color = rt == org.gradle.api.tasks.testing.TestResult.ResultType.SUCCESS ? green
+                : rt == org.gradle.api.tasks.testing.TestResult.ResultType.FAILURE ? red
+                : yellow
+        println "${color}${desc.className} > ${desc.displayName} ${label}${reset}"
+    }
+}
+
+jacoco {
+    toolVersion = '0.8.13'
+}
+
+tasks.named('test') {
+    finalizedBy tasks.named('jacocoTestReport')
+}
+
+tasks.named('jacocoTestReport') {
+    dependsOn tasks.named('test')
+    reports {
+        xml.required = true
+        html.required = true
+        csv.required = false
+    }
 }

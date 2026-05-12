@@ -1,0 +1,306 @@
+
+<__sonar_lambda_20$org.example.backend.service.MessageServiceO
+Ebackend\src\main\java\org\example\backend\service\MessageService.javag n("21*t
+13k% k(&Z
+X
+k% k(7
+%28"	__compare*
+k0 k(2
+!=*
+k% k(/
+""*
+k3 k(7
+""*
+11
+12*é
+14j- j(4¾
+»
+j- j(D
+
+%27int"java.lang.Integer#compare(II)I*1
+
+__unknown_file ("
+java.lang.Integer*'
+
+__unknown_file (
+	
+raint*'
+
+__unknown_file (
+	
+rbint"
+j& j(E
+
+
+%27int*Ë
+15i i(EB
+@
+i i(E	
+rbint"__id*#
+
+__unknown_file (
+
+%23m
+k
+j j($
+%26boolean"	__compare*
+j j(!
+!=*
+j j(
+	
+raint*
+j" j($
+	
+rbint*
+13
+14*Y
+16iC i(DC
+A
+iC i(D
+%23"__id*(
+
+__unknown_file (
+
+
+%25int*
+15*Y
+17i? i(@C
+A
+i? i(@
+%23"__id*(
+
+__unknown_file (
+
+
+%24int*
+15*¸
+18h h(EB
+@
+h h(E	
+raint"__id*#
+
+__unknown_file (
+
+%18]
+[
+i0 i(<%
+%21org.example.backend.model.Role"__id*"
+
+__unknown_file (
+""{
+y
+i! i(<
+%22"	__compare*
+i- i(/
+==*
+i! i(,
+""*3
+i0 i(<'
+%
+%21org.example.backend.model.Role*
+16
+17*Y
+19hC h(DC
+A
+hC h(D
+%18"__id*(
+
+__unknown_file (
+
+
+%20int*
+18*Ã
+1l$ l(y]
+[
+l$ l(y
+%45"__calculate*
+lK l(L
++*
+l$ l(J
+
+%38*
+lM l(y
+
+%42O
+M
+l l(z
+nbjava.lang.String"__id*#
+
+__unknown_file (
+
+%45éæ
+m m(9
+
+%46int"9java.lang.String#compareToIgnoreCase(Ljava/lang/String;)I*4
+
+__unknown_file (
+
+najava.lang.String*4
+
+__unknown_file (
+
+nbjava.lang.String2'compareToIgnoreCase(Ljava/lang/String;)"
+m m(:
+
+
+%46int*d
+2lv l(xP
+N
+lv l(x
+%42"__id*5
+
+__unknown_file (
+
+%44java.lang.String*
+1*R
+3lf l(g>
+<
+lf l(s
+%42"__id*#
+
+__unknown_file (
+
+%43*
+1*q
+4lN l(OZ
+X
+lN l(c
+%41"	__compare*
+l\ l(^
+!=*
+lN l([
+""*
+l_ l(c
+""*
+2
+3*d
+5lG l(IP
+N
+lG l(I
+%38"__id*5
+
+__unknown_file (
+
+%40java.lang.String*
+4*R
+6l: l(;>
+<
+l: l(D
+%38"__id*#
+
+__unknown_file (
+
+%39*
+4*¡
+7k$ k(y]
+[
+k$ k(y
+%36"__calculate*
+kK k(L
++*
+k$ k(J
+
+%29*
+kM k(y
+
+%33O
+M
+k k(z
+najava.lang.String"__id*#
+
+__unknown_file (
+
+%36Z
+X
+l% l(7
+%37"	__compare*
+l0 l(2
+!=*
+l% l(/
+""*
+l3 l(7
+""*
+5
+6*d
+8kv k(xP
+N
+kv k(x
+%33"__id*5
+
+__unknown_file (
+
+%35java.lang.String*
+7*R
+9kf k(g>
+<
+kf k(s
+%33"__id*#
+
+__unknown_file (
+
+%34*
+7*Y
+20h? h(@C
+A
+h? h(@
+%18"__id*(
+
+__unknown_file (
+
+
+%19int*
+18*ô
+21h! h("]
+[
+h0 h(<%
+%16org.example.backend.model.Role"__id*"
+
+__unknown_file (
+""{
+y
+h! h(<
+%17"	__compare*
+h- h(/
+==*
+h! h(,
+""*3
+h0 h(<'
+%
+%16org.example.backend.model.Role*
+19
+20*r
+10kN k(OZ
+X
+kN k(c
+%32"	__compare*
+k\ k(^
+!=*
+kN k([
+""*
+k_ k(c
+""*
+8
+9*f
+11kG k(IP
+N
+kG k(I
+%29"__id*5
+
+__unknown_file (
+
+%31java.lang.String*
+10*T
+12k: k(;>
+<
+k: k(D
+%29"__id*#
+
+__unknown_file (
+
+%30*
+10:6
+g g(*
+a%org.example.backend.model.Utilisateur:6
+g  g(!*
+b%org.example.backend.model.UtilisateurB.,
+*org.example.backend.service.MessageService

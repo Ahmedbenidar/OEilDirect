@@ -72,14 +72,15 @@ export default function AdminDashboard() {
             {/* Navbar */}
             <header className="sticky top-0 z-50 bg-white dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800 shadow-sm">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                        <div className="w-8 h-8 rounded-lg bg-purple-600 flex items-center justify-center">
-                            <span className="material-symbols-outlined text-white text-base">admin_panel_settings</span>
-                        </div>
-                        <div>
-                            <span className="font-bold text-slate-900 dark:text-slate-100 text-sm">ŒilDirect</span>
-                            <span className="ml-2 text-xs font-medium bg-purple-100 dark:bg-purple-900/40 text-purple-700 dark:text-purple-300 px-2 py-0.5 rounded-full">Admin</span>
-                        </div>
+                    <div className="flex items-center gap-3 min-w-0">
+                        <Link href="/admin" className="flex items-center shrink-0 min-w-0">
+                            <img
+                                src="/logos/logo_cabinet.png"
+                                alt="ŒilDirect"
+                                className="h-14 w-auto object-contain scale-[3.5] origin-left dark:opacity-95"
+                                style={{ mixBlendMode: 'multiply' }}
+                            />
+                        </Link>
                     </div>
                     <div className="flex items-center gap-4">
                         <span className="hidden sm:block text-sm text-slate-500 dark:text-slate-400">{user?.nom}</span>

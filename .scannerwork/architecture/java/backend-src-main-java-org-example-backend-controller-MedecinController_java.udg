@@ -1,0 +1,1057 @@
+
+1.0ahmedbenidar_testsonarJavaFrontend"1778331590403*java2.B—$
+P
+Kbackend/src/main/java/org/example/backend/controller/MedecinController.java2
+	
+type3
+	
+MAIN4
+
+package6
+#
+org.example.backend.controller7
+5
+0org.example.backend.controller.MedecinController9
+
+class10
+
+access11
+
+public12
+
+
+full-range13
+
+(23:1)-(168:2)14
+
+simple-name15
+
+MedecinController16
+
+RestController18
+
+unknown19
+
+annotated by20
+,
+&Recovered#typeBindingLRestController;022
+
+
+uses23
+
+RequestMapping25
+,
+&Recovered#typeBindingLRequestMapping;027
+
+RequiredArgsConstructor29
+5
+/Recovered#typeBindingLRequiredArgsConstructor;031
+E
+?org.example.backend.controller.MedecinController.medecinService33
+
+field34
+
+private35
+
+(28:5)-(28:49)36
+
+medecinService37
+0
+*org.example.backend.service.MedecinService39
+
+is type40
+L
+Forg.example.backend.controller.MedecinController.utilisateurRepository42
+
+(29:5)-(29:63)43
+
+utilisateurRepository44
+:
+4org.example.backend.repository.UtilisateurRepository46
+C
+=org.example.backend.controller.MedecinController.objectMapper48
+
+(30:5)-(30:73)49
+
+objectMapper50
+
+ObjectMapper52
+W
+Qorg.example.backend.controller.MedecinController#listerMedecins()LResponseEntity;54
+
+method55
+
+(32:5)-(40:6)56
+
+listerMedecins57
+
+ResponseEntity59
+
+returns60
+
+
+GetMapping62
+(
+"Recovered#typeBindingLGetMapping;064
+
+
+references65
+~
+xorg.example.backend.controller.MedecinController#toPublicMedecin(Lorg/example/backend/model/Utilisateur;)Ljava/util/Map;67
+
+(42:5)-(57:6)68
+
+toPublicMedecin69
++
+%org.example.backend.model.Utilisateur71
+
+	has param72
+j
+dorg.example.backend.controller.MedecinController#parseJoursHebdo(Ljava/lang/String;)Ljava/util/List;74
+
+calls75
+h
+borg.example.backend.controller.MedecinController#parseDatesOff(Ljava/lang/String;)Ljava/util/List;77
+
+(59:5)-(70:6)78
+
+parseJoursHebdo79
+8
+2org.example.backend.controller.MedecinController$181
+
+	protected82
+
+(64:98)-(65:14)83
+
+(72:5)-(82:6)84
+
+parseDatesOff85
+8
+2org.example.backend.controller.MedecinController$287
+
+(77:83)-(78:14)88
+o
+iorg.example.backend.controller.MedecinController#listerDemandesAValider(Ljava/lang/Long;)LResponseEntity;90
+
+(84:5)-(87:6)91
+
+listerDemandesAValider92
+*
+$org.example.backend.model.DemandeRDV94
+
+PathVariable96
+*
+$Recovered#typeBindingLPathVariable;098
+j
+corg.example.backend.service.MedecinService#listerDemandesAValider(Ljava/lang/Long;)Ljava/util/List;100
+h
+aorg.example.backend.controller.MedecinController#toutesDemandesEnAttenteMedecin()LResponseEntity;102
+
+(89:5)-(92:6)103
+%
+toutesDemandesEnAttenteMedecin104
+b
+[org.example.backend.service.MedecinService#toutesDemandesEnAttenteMedecin()Ljava/util/List;106
+m
+forg.example.backend.controller.MedecinController#listerTestsTermines(Ljava/lang/Long;)LResponseEntity;108
+
+(94:5)-(97:6)109
+
+listerTestsTermines110
+g
+`org.example.backend.service.MedecinService#listerTestsTermines(Ljava/lang/Long;)Ljava/util/List;112
+i
+borg.example.backend.controller.MedecinController#getResultatTest(Ljava/lang/Long;)LResponseEntity;114
+
+(99:5)-(102:6)115
+
+getResultatTest116
++
+$org.example.backend.model.TestVisuel118
+y
+rorg.example.backend.service.MedecinService#getResultatTest(Ljava/lang/Long;)Lorg/example/backend/model/TestVisuel;120
+g
+`org.example.backend.controller.MedecinController#prescrireTest(Ljava/lang/Long;)LResponseEntity;122
+
+(104:5)-(107:6)123
+
+prescrireTest124
+
+PostMapping126
+*
+#Recovered#typeBindingLPostMapping;0128
+w
+porg.example.backend.service.MedecinService#prescrireTest(Ljava/lang/Long;)Lorg/example/backend/model/TestVisuel;130
+h
+aorg.example.backend.controller.MedecinController#listerPatients(Ljava/lang/Long;)LResponseEntity;132
+
+(109:5)-(132:6)133
+
+listerPatients134
+h
+aorg.example.backend.service.MedecinService#listerToutesDemandes(Ljava/lang/Long;)Ljava/util/List;136
+k
+dorg.example.backend.controller.MedecinController#listerOrdonnances(Ljava/lang/Long;)LResponseEntity;138
+
+(134:5)-(158:6)139
+
+listerOrdonnances140
++
+$org.example.backend.model.Ordonnance142
+l
+eorg.example.backend.service.MedecinService#listerOrdonnancesMedecin(Ljava/lang/Long;)Ljava/util/List;144
+ê
+àorg.example.backend.controller.MedecinController#genererOrdonnance(Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;)LResponseEntity;146
+
+(160:5)-(167:6)147
+
+genererOrdonnance148
+
+RequestParam150
++
+$Recovered#typeBindingLRequestParam;0152
+†
+òorg.example.backend.service.MedecinService#genererOrdonnance(Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;)Lorg/example/backend/model/Ordonnance;154J
+
+1
+12
+
+
+3
+4 Z
+
+5
+5768jô
+M
+66G
+666755 *
+1*! *(028:5B$
+
+
+11
+35
+
+
+13
+68
+
+
+15
+69
+
+129
+12913019
+
+149
+14915019
+M
+47G
+474834 *
+1' (328:5B$
+
+
+11
+35
+
+
+13
+49
+
+
+15
+50
+M
+53G
+535455 *
+1!6 !(D28:5B$
+
+
+11
+12
+
+
+13
+56
+
+
+15
+57
+M
+73G
+737455 *
+1; ;(*28:5B$
+
+
+11
+35
+
+
+13
+78
+
+
+15
+79
+
+21
+212219
+
+17
+171819
+
+97
+979819
+
+30
+303119
+T
+137M
+13713855 *
+1á6 á(G28:5B&
+
+
+11
+12
+
+13
+139
+
+15
+140
+
+119
+11912019
+
+24
+242519
+
+141
+14114219
+
+99
+9910019
+
+125
+12512619
+
+38
+383919
+
+143
+14314419
+
+26
+262719
+R
+131K
+13113255 *
+1n6 n(D28:5B&
+
+
+11
+12
+
+13
+133
+
+15
+134
+R
+107K
+10710855 *
+1_- _(@28:5B&
+
+
+11
+12
+
+13
+109
+
+15
+110
+
+63
+636419
+
+51
+515219
+B
+86<
+868710 *
+1MS N(276:5B
+
+
+11
+82
+
+
+13
+88
+B
+80<
+808110 *
+1@b A(273:5B
+
+
+11
+82
+
+
+13
+83
+
+135
+13513619
+T
+145M
+14514655 *
+1°' °(828:5B&
+
+
+11
+12
+
+13
+147
+
+15
+148
+R
+101K
+10110255 *
+1Z- Z(K28:5B&
+
+
+11
+12
+
+13
+103
+
+15
+104
+
+111
+11111219
+
+153
+15315419
+
+28
+282919
+M
+89G
+899055 *
+1U- U(C28:5B$
+
+
+11
+12
+
+
+13
+91
+
+
+15
+92
+
+127
+12712819
+G
+8B
+8910 *
+1 (:5B$
+
+
+11
+12
+
+
+13
+14
+
+
+15
+16
+
+58
+585919
+
+61
+616219
+
+105
+10510619
+
+117
+11711819
+
+70
+707119
+
+93
+939419
+
+45
+454619
+M
+41G
+414234 *
+1) (>28:5B$
+
+
+11
+35
+
+
+13
+43
+
+
+15
+44
+R
+113K
+11311455 *
+1d' d(628:5B&
+
+
+11
+12
+
+13
+115
+
+15
+116
+
+151
+15115219
+M
+32G
+323334 *
+1" (028:5B$
+
+
+11
+35
+
+
+13
+36
+
+
+15
+37
+M
+76G
+767755 *
+1H H('28:5B$
+
+
+11
+35
+
+
+13
+84
+
+
+15
+85
+R
+121K
+12112255 *
+1i' i(428:5B&
+
+
+11
+12
+
+13
+123
+
+15
+124
+
+95
+959619rç#
+
+81720*
+1 (
+
+82123*
+1 (
+
+82420*
+1 (!
+
+82623*
+1 (
+
+82820*
+1 (
+
+83023*
+1 (
+
+323840*
+1 (!
+
+323823*
+1 (!
+
+323823*
+1" (0
+
+414540*
+1 ((
+
+414523*
+1 ((
+
+414523*
+1) (>
+
+475140*
+1 (&
+
+475123*
+1 (&
+
+475123*
+1' (3
+
+535860*
+1! !(5
+
+536120*
+1   (
+
+536323*
+1   (
+
+535823*
+1! !(
+
+534165*
+1". "(C
+
+534523*
+1". "(C
+
+534165*
+1". "(C
+
+53823*
+1% %(
+
+53865*
+1% %(
+
+667072*
+1*1 *(<
+
+667040*
+1*= *(>
+
+667023*
+1*1 *(<
+
+66865*
+15) 5(8
+
+667375*
+15) 5(8
+
+66865*
+16  6(-
+
+667675*
+16  6(-
+
+66865*
+17# 7(0
+
+667675*
+17# 7(0
+
+734765*
+1@" @(.
+
+735123*
+1@" @(.
+
+734765*
+1@" @(.
+
+764765*
+1M M( 
+
+765123*
+1M M( 
+
+764765*
+1M M( 
+
+895860*
+1U U(,
+
+896120*
+1T T(3
+
+896323*
+1T T(
+
+895823*
+1U U(
+
+899323*
+1U  U(*
+
+899520*
+1UD U(Q
+
+899723*
+1UE U(Q
+
+893865*
+1V" V(G
+
+899975*
+1V1 V(G
+
+893265*
+1V" V(0
+
+893823*
+1V" V(0
+
+893265*
+1V" V(0
+
+1015860*
+1Z Z(,
+
+1016120*
+1Y Y(0
+
+1016323*
+1Y Y(
+
+1015823*
+1Z Z(
+
+1019323*
+1Z  Z(*
+
+1013865*
+1[" [(O
+
+10110575*
+1[1 [(O
+
+1013265*
+1[" [(0
+
+1013823*
+1[" [(0
+
+1013265*
+1[" [(0
+
+1075860*
+1_ _(,
+
+1076120*
+1^ ^(/
+
+1076323*
+1^ ^(
+
+1075823*
+1_ _(
+
+1079323*
+1_  _(*
+
+1079520*
+1_A _(N
+
+1079723*
+1_B _(N
+
+1073865*
+1`" `(D
+
+10711175*
+1`1 `(D
+
+1073265*
+1`" `(0
+
+1073823*
+1`" `(0
+
+1073265*
+1`" `(0
+
+1135860*
+1d d(&
+
+1136120*
+1c c(7
+
+1136323*
+1c c(
+
+1135823*
+1d d(
+
+11311723*
+1d d(%
+
+1139520*
+1d7 d(D
+
+1139723*
+1d8 d(D
+
+11311760*
+1e" e(@
+
+1133865*
+1e" e(@
+
+11311975*
+1e1 e(@
+
+1133265*
+1e" e(0
+
+1133823*
+1e" e(0
+
+1133265*
+1e" e(0
+
+1215860*
+1i i(&
+
+12112520*
+1h h(9
+
+12112723*
+1h h(
+
+1215823*
+1i i(
+
+12111723*
+1i i(%
+
+1219520*
+1i5 i(B
+
+1219723*
+1i6 i(B
+
+12111760*
+1j" j(>
+
+1213865*
+1j" j(>
+
+12112975*
+1j1 j(>
+
+1213265*
+1j" j(0
+
+1213823*
+1j" j(0
+
+1213265*
+1j" j(0
+
+1315860*
+1n n(5
+
+1316120*
+1m m()
+
+1316323*
+1m m(
+
+1315823*
+1n n(
+
+1319520*
+1nE n(R
+
+1319723*
+1nF n(R
+
+1317040*
+1o o(
+
+1317023*
+1o	 o(
+
+1314165*
+1o o(4
+
+1314523*
+1o o(4
+
+1314165*
+1o o(4
+
+1319323*
+1q q(
+
+1313865*
+1q% q(H
+
+13113575*
+1q4 q(H
+
+1313265*
+1q% q(3
+
+1313823*
+1q% q(3
+
+1313265*
+1q% q(3
+
+1319340*
+1s s(
+
+1319323*
+1s s(
+
+1317040*
+1t t(
+
+1317023*
+1t t(
+
+1375860*
+1á á(5
+
+1376120*
+1Ü Ü(,
+
+1376323*
+1Ü Ü(
+
+1375823*
+1á á(
+
+1379520*
+1áH á(U
+
+1379723*
+1áI á(U
+
+1377040*
+1à à(
+
+1377023*
+1à	 à(
+
+1374165*
+1à à(4
+
+1374523*
+1à à(4
+
+1374165*
+1à à(4
+
+13714123*
+1ä ä(
+
+1373865*
+1ä( ä(O
+
+13714375*
+1ä7 ä(O
+
+1373265*
+1ä( ä(6
+
+1373823*
+1ä( ä(6
+
+1373265*
+1ä( ä(6
+
+13714140*
+1ãE ã(F
+
+1377040*
+1ï ï($
+
+1377023*
+1ï ï(
+
+1455860*
+1° °(&
+
+14512520*
+1† †(5
+
+14512723*
+1† †(
+
+1455823*
+1° °(
+
+14514123*
+1° °(%
+
+1459520*
+1¢ ¢(
+
+1459723*
+1¢ ¢(
+
+14514920*
+1£ £(
+
+14515123*
+1£ £(
+
+14514920*
+1§ §(?
+
+14515123*
+1§ §(
+
+14514140*
+1• •(
+
+14514123*
+1•	 •(
+
+14514160*
+1•! •(A
+
+1453865*
+1•! •(A
+
+14515375*
+1•0 •(A
+
+1453265*
+1•! •(/
+
+1453823*
+1•! •(/
+
+1453265*
+1•! •(/

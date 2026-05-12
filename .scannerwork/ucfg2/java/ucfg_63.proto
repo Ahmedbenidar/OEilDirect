@@ -1,0 +1,279 @@
+
+jorg.example.backend.controller.MessageController#toMap(Lorg/example/backend/model/Message;)Ljava/util/Map;U
+Kbackend\src\main\java\org\example\backend\controller\MessageController.javaT  T(%"14*ï
+13[ [(ü
+ú
+[ [(6
+%7"__mapSet*2
+
+__unknown_file (
+
+mapjava.util.Map*(
+
+__unknown_file (
+
+senderId*"
+
+__unknown_file (
+""Y
+W
+\" \(C
+%8"	__compare*
+\< \(>
+!=*
+\" \(;
+""*
+\? \(C
+""*
+11
+12*Ò
+14U" U(186
+U& U(/
+%0java.util.HashMap"java.util.HashMapf
+d
+U" U(1
+%1"java.util.HashMap#<init>()V*5
+
+__unknown_file (
+
+%0java.util.HashMap_
+]
+U U(2
+mapjava.util.Map"__id*5
+
+__unknown_file (
+
+%0java.util.HashMapô
+ñ
+V V( 
+%2"__mapSet*2
+
+__unknown_file (
+
+mapjava.util.Map*"
+
+__unknown_file (
+id*"
+
+__unknown_file (
+""û
+õ
+W W(*
+%3"__mapSet*2
+
+__unknown_file (
+
+mapjava.util.Map*'
+
+__unknown_file (	
+contenu*"
+
+__unknown_file (
+""†
+ù
+X X(.
+%4"__mapSet*2
+
+__unknown_file (
+
+mapjava.util.Map*)
+
+__unknown_file (
+	dateEnvoi*"
+
+__unknown_file (
+""ô
+ñ
+Y Y(
+%5"__mapSet*2
+
+__unknown_file (
+
+mapjava.util.Map*"
+
+__unknown_file (
+lu*"
+
+__unknown_file (
+""Y
+W
+Z Z(!
+%6"	__compare*
+Z Z(
+!=*
+Z Z(
+""*
+Z Z(!
+""*
+13
+3*1
+1b b(""
+b b(
+
+mapjava.util.Map*∑
+2` `(¢
+ü
+` `(:
+%24"__mapSet*2
+
+__unknown_file (
+
+mapjava.util.Map**
+
+__unknown_file (
+
+receiverId*"
+
+__unknown_file (
+""*
+1*q
+3_ _(Z
+X
+_ _(#
+%23"	__compare*
+_ _(
+!=*
+_ _(
+""*
+_ _(#
+""*
+2
+1*∏
+4] ](h£
+†
+] ](h
+%22"__mapSet*2
+
+__unknown_file (
+
+mapjava.util.Map**
+
+__unknown_file (
+
+senderRole*#
+
+__unknown_file (
+
+%19*
+3*d
+5]e ](gP
+N
+]e ](g
+%19"__id*5
+
+__unknown_file (
+
+%21java.lang.String*
+4*R
+6]D ](E>
+<
+]D ](b
+%19"__id*#
+
+__unknown_file (
+
+%20*
+4*¯
+7	\! \(¨^
+\
+	\! \(¨
+%16"__calculate*
+\l \(m
++*
+\! \(k
+
+%9*
+	\n \(¨
+
+%13£
+†
+	\ \(≠
+%17"__mapSet*2
+
+__unknown_file (
+
+mapjava.util.Map*)
+
+__unknown_file (
+	senderNom*#
+
+__unknown_file (
+
+%16Z
+X
+]" ](A
+%18"	__compare*
+]: ](<
+!=*
+]" ](9
+""*
+]= ](A
+""*
+5
+6*h
+8
+\© \(´R
+P
+
+\© \(´
+%13"__id*5
+
+__unknown_file (
+
+%15java.lang.String*
+7*V
+9
+\ê \(ë@
+>
+
+\ê \(¶
+%13"__id*#
+
+__unknown_file (
+
+%14*
+7*x
+10\o \(p`
+^
+	\o \(ç
+%12"	__compare*
+
+\Ü \(à
+!=*
+	\o \(Ö
+""*
+
+\â \(ç
+""*
+8
+9*e
+11\h \(jO
+M
+\h \(j
+%9"__id*5
+
+__unknown_file (
+
+%11java.lang.String*
+10*Ø
+12\F \(GZ
+X
+\F \(e
+%10"__calculate*
+\` \(a
++*
+\F \(_
+""*
+\b \(e
+ =
+;
+\F \(e
+%9"__id*#
+
+__unknown_file (
+
+%10*
+10:2
+T& T(/&
+m!org.example.backend.model.MessageB42
+0org.example.backend.controller.MessageController

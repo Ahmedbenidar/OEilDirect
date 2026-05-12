@@ -1,0 +1,781 @@
+
+1.0ahmedbenidar_testsonarJavaFrontend"1778331593766*java2.Bè
+R
+Mbackend/src/test/java/org/example/backend/service/MedecinServiceUnitTest.java2
+	
+type3
+	
+TEST4
+
+package6
+ 
+org.example.backend.service7
+7
+2org.example.backend.service.MedecinServiceUnitTest9
+
+class10
+
+access11
+
+	protected12
+
+
+full-range13
+
+(28:1)-(114:2)14
+
+simple-name15
+
+MedecinServiceUnitTest16
+
+
+ExtendWith18
+
+unknown19
+
+annotated by20
+(
+"Recovered#typeBindingLExtendWith;022
+
+
+uses23
+.
+(Recovered#typeBindingLMockitoExtension;025
+N
+Horg.example.backend.service.MedecinServiceUnitTest.utilisateurRepository27
+
+field28
+
+(31:5)-(32:49)29
+
+utilisateurRepository30
+
+UtilisateurRepository32
+
+is type33
+
+
+Mock35
+"
+Recovered#typeBindingLMock;037
+M
+Gorg.example.backend.service.MedecinServiceUnitTest.demandeRDVRepository39
+
+(34:5)-(35:47)40
+
+demandeRDVRepository41
+
+DemandeRDVRepository43
+M
+Gorg.example.backend.service.MedecinServiceUnitTest.testVisuelRepository45
+
+(37:5)-(38:47)46
+
+testVisuelRepository47
+
+TestVisuelRepository49
+M
+Gorg.example.backend.service.MedecinServiceUnitTest.ordonnanceRepository51
+
+(40:5)-(41:47)52
+
+ordonnanceRepository53
+
+OrdonnanceRepository55
+G
+Aorg.example.backend.service.MedecinServiceUnitTest.medecinService57
+
+(43:5)-(44:35)58
+
+medecinService59
+
+MedecinService61
+
+InjectMocks63
+)
+#Recovered#typeBindingLInjectMocks;065
+b
+\org.example.backend.service.MedecinServiceUnitTest#listerDemandesAValider_trieParDateDesc()V67
+
+method68
+
+(46:5)-(60:6)69
+,
+&listerDemandesAValider_trieParDateDesc70
+
+
+Test72
+"
+Recovered#typeBindingLTest;074
+)
+#Recovered#typeBindingLUtilisateur;076
+
+
+references77
+(
+"Recovered#typeBindingLDemandeRDV;079
+f
+`org.example.backend.service.MedecinServiceUnitTest#getResultatTest_aucuneDemande_leveNotFound()V81
+
+(62:5)-(66:6)82
+0
+*getResultatTest_aucuneDemande_leveNotFound83
+7
+1Recovered#typeBindingLResourceNotFoundException;085
+i
+corg.example.backend.service.MedecinServiceUnitTest#prescrireTest_statutInvalide_leveIllegalState()V87
+
+(68:5)-(73:6)88
+3
+-prescrireTest_statutInvalide_leveIllegalState89
+d
+^org.example.backend.service.MedecinServiceUnitTest#prescrireTest_ok_changeStatut_etCreeTest()V91
+
+(75:5)-(87:6)92
+.
+(prescrireTest_ok_changeStatut_etCreeTest93
+(
+"Recovered#typeBindingLTestVisuel;095
+m
+gorg.example.backend.service.MedecinServiceUnitTest#genererOrdonnance_testPasTermine_leveIllegalState()V97
+
+(89:5)-(96:6)98
+7
+1genererOrdonnance_testPasTermine_leveIllegalState99
+o
+horg.example.backend.service.MedecinServiceUnitTest#genererOrdonnance_ok_changeStatut_etRemplitContenu()V101
+
+(98:5)-(113:6)102
+9
+2genererOrdonnance_ok_changeStatut_etRemplitContenu103
+)
+"Recovered#typeBindingLOrdonnance;0105J
+
+1
+12
+
+
+3
+4 Z
+
+5
+5768j²
+
+
+54
+545519
+
+36
+363719
+M
+44G
+444528 *
+1& &(.28:5B$
+
+
+11
+12
+
+
+13
+46
+
+
+15
+47
+M
+50G
+505128 *
+1) )(.28:5B$
+
+
+11
+12
+
+
+13
+52
+
+
+15
+53
+
+84
+848519
+
+34
+343519
+
+71
+717219
+M
+66G
+666768 *
+1/
+ /(028:5B$
+
+
+11
+12
+
+
+13
+69
+
+
+15
+70
+M
+80G
+808168 *
+1?
+ ?(428:5B$
+
+
+11
+12
+
+
+13
+82
+
+
+15
+83
+
+75
+757619
+
+42
+424319
+
+94
+949519
+M
+26G
+262728 *
+1   (028:5B$
+
+
+11
+12
+
+
+13
+29
+
+
+15
+30
+
+62
+626319
+
+21
+212219
+
+64
+646519
+
+24
+242519
+M
+96G
+969768 *
+1Z
+ Z(;28:5B$
+
+
+11
+12
+
+
+13
+98
+
+
+15
+99
+M
+38G
+383928 *
+1# #(.28:5B$
+
+
+11
+12
+
+
+13
+40
+
+
+15
+41
+G
+8B
+8910 *
+1 (:5B$
+
+
+11
+12
+
+
+13
+14
+
+
+15
+16
+M
+90G
+909168 *
+1L
+ L(228:5B$
+
+
+11
+12
+
+
+13
+92
+
+
+15
+93
+
+48
+484919
+
+73
+737419
+
+60
+606119
+R
+100K
+10010168 *
+1c
+ c(<28:5B&
+
+
+11
+12
+
+13
+102
+
+15
+103
+
+104
+10410519
+
+17
+171819
+M
+56G
+565728 *
+1, ,("28:5B$
+
+
+11
+12
+
+
+13
+58
+
+
+15
+59
+
+78
+787919
+
+31
+313219
+M
+86G
+868768 *
+1E
+ E(728:5B$
+
+
+11
+12
+
+
+13
+88
+
+
+15
+89r¸
+
+81720*
+1 ($
+
+82123*
+1 (
+
+82423*
+1 (
+
+263133*
+1   (
+
+263420*
+1 (
+
+
+263623*
+1 (
+
+
+263123*
+1   (
+
+263123*
+1   (0
+
+384233*
+1# #(
+
+383420*
+1" "(
+
+
+383623*
+1" "(
+
+
+384223*
+1# #(
+
+384223*
+1# #(.
+
+444833*
+1& &(
+
+443420*
+1% %(
+
+
+443623*
+1% %(
+
+
+444823*
+1& &(
+
+444823*
+1& &(.
+
+505433*
+1) )(
+
+503420*
+1( ((
+
+
+503623*
+1( ((
+
+
+505423*
+1) )(
+
+505423*
+1) )(.
+
+566033*
+1, ,(
+
+566220*
+1+ +(
+
+566423*
+1+ +(
+
+566023*
+1, ,(
+
+566023*
+1, ,("
+
+667120*
+1. .(
+
+
+667323*
+1. .(
+
+
+667533*
+10 0(
+
+667523*
+10	 0(
+
+662677*
+11 1(#
+
+663123*
+11 1(#
+
+662677*
+11 1(#
+
+667833*
+13 3(
+
+667823*
+13	 3(
+
+667833*
+14 4(
+
+667823*
+14	 4(
+
+667833*
+15 5(
+
+667823*
+15	 5(
+
+663877*
+16 6("
+
+664223*
+16 6("
+
+663877*
+16 6("
+
+667823*
+19 9(
+
+665677*
+19  9(.
+
+666023*
+19  9(.
+
+665677*
+19  9(.
+
+807120*
+1> >(
+
+
+807323*
+1> >(
+
+
+803877*
+1@ @("
+
+804223*
+1@ @("
+
+803877*
+1@ @("
+
+808423*
+1A A(/
+
+867120*
+1D D(
+
+
+867323*
+1D D(
+
+
+867833*
+1F F(
+
+867823*
+1F	 F(
+
+863877*
+1G G("
+
+864223*
+1G G("
+
+863877*
+1G G("
+
+907120*
+1K K(
+
+
+907323*
+1K K(
+
+
+907833*
+1M M(
+
+907823*
+1M	 M(
+
+903877*
+1N N("
+
+904223*
+1N N("
+
+903877*
+1N N("
+
+904477*
+1O O("
+
+904823*
+1O O("
+
+904477*
+1O O("
+
+909423*
+1O, O(6
+
+909433*
+1Q Q(
+
+909423*
+1Q	 Q(
+
+905677*
+1Q Q(&
+
+906023*
+1Q Q(&
+
+905677*
+1Q Q(&
+
+904223*
+1U U($
+
+903877*
+1U U($
+
+904823*
+1V V($
+
+904477*
+1V V($
+
+909423*
+1V/ V(9
+
+967120*
+1Y Y(
+
+
+967323*
+1Y Y(
+
+
+967833*
+1[ [(
+
+967823*
+1[	 [(
+
+963877*
+1\ \("
+
+964223*
+1\ \("
+
+963877*
+1\ \("
+
+964477*
+1] ]("
+
+964823*
+1] ]("
+
+964477*
+1] ]("
+
+1007120*
+1b b(
+
+
+1007323*
+1b b(
+
+
+1007833*
+1d d(
+
+1007823*
+1d	 d(
+
+1009433*
+1e e(
+
+1009423*
+1e	 e(
+
+1003877*
+1f f("
+
+1004223*
+1f f("
+
+1003877*
+1f f("
+
+1004477*
+1g g("
+
+1004823*
+1g g("
+
+1004477*
+1g g("
+
+1005077*
+1h h("
+
+1005423*
+1h h("
+
+1005077*
+1h h("
+
+10010423*
+1h, h(6
+
+10010433*
+1j j(
+
+10010423*
+1j	 j(
+
+1005677*
+1j j(&
+
+1006023*
+1j j(&
+
+1005677*
+1j j(&
+
+1004223*
+1p p($
+
+1003877*
+1p p($

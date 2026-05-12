@@ -79,14 +79,9 @@ export default function MesRendezVous() {
 
                 {/* TOP NAV */}
                 <header className="bg-white/50 backdrop-blur-md shadow-sm sticky top-0 z-50 flex items-center justify-between px-8 h-16 w-full">
-                    <div className="flex items-center gap-4">
-                        <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center shadow-md shadow-blue-200">
-                            <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0zM2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                            </svg>
-                        </div>
-                        <span className="text-2xl font-black tracking-tight text-slate-900">ŒilDirect</span>
-                    </div>
+                    <Link href="/patient" className="flex items-center shrink-0 min-w-0">
+                        <img src="/logos/logo_cabinet.png" alt="ŒilDirect" className="h-14 w-auto object-contain scale-[3.5] origin-left" style={{ mixBlendMode: 'multiply' }} />
+                    </Link>
                     <div className="hidden md:flex items-center gap-8">
                         <nav className="flex gap-6">
                             <SameRouteScrollLink href="/patient" className="text-slate-500 font-medium hover:text-sky-600 transition-colors text-sm">Tableau de bord</SameRouteScrollLink>
@@ -116,9 +111,11 @@ export default function MesRendezVous() {
                 <div className="flex">
                     {/* SIDEBAR */}
                     <aside className="hidden md:flex h-[calc(100vh-4rem)] w-64 fixed left-0 top-16 flex-col gap-2 p-4 bg-slate-100/80 border-r border-slate-200 z-40 pointer-events-auto">
-                        <div className="mb-8 px-4">
-                            <h2 className="text-xl font-black text-sky-700 uppercase tracking-[0.2em]">ŒilDirect</h2>
-                            <p className="text-[10px] uppercase tracking-[0.2em] text-slate-400 font-bold">Plateforme Médicale</p>
+                        <div className="mb-6 px-2">
+                            <Link href="/patient" className="block">
+                                <img src="/logos/logo_cabinet.png" alt="ŒilDirect" className="h-10 w-auto object-contain scale-[2] origin-left max-w-[200px]" style={{ mixBlendMode: 'multiply' }} />
+                            </Link>
+                            <p className="text-[10px] uppercase tracking-[0.2em] text-slate-400 font-bold mt-2">Plateforme Médicale</p>
                         </div>
                         <nav className="space-y-1">
                             <SidebarLink href="/patient" icon="dashboard" label="Tableau de bord" />

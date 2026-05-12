@@ -1,0 +1,54 @@
+
+borg.example.backend.controller.AuthController#normalizeEmail(Ljava/lang/String;)Ljava/lang/String;R
+Hbackend\src\main\java\org\example\backend\controller\AuthController.javaE E(("4*§
+2F& F(+‘Ž
+F& F(2
+%4java.lang.String")java.lang.String#trim()Ljava/lang/String;*7
+
+__unknown_file (
+
+emailjava.lang.String2trim()œ™
+F& F(@
+%3java.lang.String"0java.lang.String#toLowerCase()Ljava/lang/String;*4
+
+__unknown_file (
+
+%4java.lang.String2toLowerCase()`
+^
+F& F(@
+%1java.lang.String"__id*4
+
+__unknown_file (
+
+%3java.lang.String*
+1*n
+3F F(#Z
+X
+F F(#
+%1java.lang.String"__id*.
+
+__unknown_file (
+
+%2
+<nulltype>*
+1*Ž
+4F F(w
+u
+F F(
+%0boolean"	__compare*
+F F(
+==*'
+F F(
+
+emailjava.lang.String*
+F F(
+""*
+2
+3*3
+1F F(A"$
+F F(A
+
+%1java.lang.String:%
+E) E(5
+emailjava.lang.StringB1"/
+-org.example.backend.controller.AuthController

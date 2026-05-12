@@ -1,0 +1,489 @@
+
+1.0ahmedbenidar_testsonarJavaFrontend"1778331592180*java2.Bß
+D
+?backend/src/main/java/org/example/backend/model/TestVisuel.java2
+	
+type3
+	
+MAIN4
+
+package6
+
+org.example.backend.model7
+)
+$org.example.backend.model.TestVisuel9
+
+class10
+
+access11
+
+public12
+
+
+full-range13
+
+(8:1)-(42:2)14
+
+simple-name15
+
+
+TestVisuel16
+
+Entity18
+
+unknown19
+
+annotated by20
+$
+Recovered#typeBindingLEntity;022
+
+
+uses23
+
+Table25
+#
+Recovered#typeBindingLTable;027
+
+Getter29
+$
+Recovered#typeBindingLGetter;031
+
+Setter33
+$
+Recovered#typeBindingLSetter;035
+
+NoArgsConstructor37
+/
+)Recovered#typeBindingLNoArgsConstructor;039
+
+AllArgsConstructor41
+0
+*Recovered#typeBindingLAllArgsConstructor;043
+
+Builder45
+%
+Recovered#typeBindingLBuilder;047
+-
+'org.example.backend.model.TestVisuel.id49
+
+field50
+
+private51
+
+(17:5)-(19:21)52
+
+id53
+
+Id55
+ 
+Recovered#typeBindingLId;057
+
+GeneratedValue59
+,
+&Recovered#typeBindingLGeneratedValue;061
+2
+,org.example.backend.model.TestVisuel.demande63
+
+(21:5)-(24:32)64
+
+demande65
+*
+$org.example.backend.model.DemandeRDV67
+
+is type68
+
+OneToOne70
+&
+ Recovered#typeBindingLOneToOne;072
+
+
+JoinColumn74
+(
+"Recovered#typeBindingLJoinColumn;076
+
+JsonIgnoreProperties78
+2
+,Recovered#typeBindingLJsonIgnoreProperties;080
+=
+7org.example.backend.model.TestVisuel.conditionsValidees82
+
+(26:5)-(27:48)83
+
+conditionsValidees84
+
+Builder.Default86
+0
+*org.example.backend.model.TestVisuel.score88
+
+(29:5)-(29:27)89
+
+score90
+<
+6org.example.backend.model.TestVisuel.recommandationsIA92
+
+(31:5)-(32:38)93
+
+recommandationsIA94
+
+Column96
+$
+Recovered#typeBindingLColumn;098
+;
+4org.example.backend.model.TestVisuel.dateRealisation100
+
+(34:5)-(34:43)101
+
+dateRealisation102
+7
+0org.example.backend.model.TestVisuel#onCreate()V104
+
+method105
+
+	protected106
+
+(36:5)-(41:6)107
+
+onCreate108
+
+
+PrePersist110
+)
+"Recovered#typeBindingLPrePersist;0112
+
+
+references113J
+
+1
+12
+
+
+3
+4 Z
+
+5
+5768jÚ	
+
+36
+363719
+
+17
+171819
+M
+87G
+878850 *
+1 (28:5B$
+
+
+11
+51
+
+
+13
+89
+
+
+15
+90
+
+97
+979819
+
+28
+282919
+
+44
+444519
+
+85
+858619
+
+111
+11111219
+
+42
+424319
+
+38
+383919
+M
+48G
+484950 *
+1 (28:5B$
+
+
+11
+51
+
+
+13
+52
+
+
+15
+53
+
+34
+343519
+
+77
+777819
+
+58
+585919
+
+69
+697019
+
+73
+737419
+
+95
+959619
+
+60
+606119
+
+109
+10911019
+
+75
+757619
+
+79
+798019
+
+71
+717219
+T
+103M
+103104105 *
+1% %(28:5B'
+
+11
+106
+
+13
+107
+
+15
+108
+
+24
+242519
+
+40
+404119
+M
+81G
+818250 *
+1 ('28:5B$
+
+
+11
+51
+
+
+13
+83
+
+
+15
+84
+
+26
+262719
+
+46
+464719
+
+30
+303119
+G
+8B
+8910 *
+1 (:5B$
+
+
+11
+12
+
+
+13
+14
+
+
+15
+16
+
+21
+212219
+
+66
+666719
+
+32
+323319
+M
+91G
+919250 *
+1   (%28:5B$
+
+
+11
+51
+
+
+13
+93
+
+
+15
+94
+
+54
+545519
+
+56
+565719
+P
+99J
+9910050 *
+1" "(*28:5B&
+
+
+11
+51
+
+13
+101
+
+15
+102
+M
+62G
+626350 *
+1 (28:5B$
+
+
+11
+51
+
+
+13
+64
+
+
+15
+65rÆ
+
+81720*
+1 (
+
+82123*
+1 (
+
+82420*
+1	 	(
+
+82623*
+1	 	(
+
+82820*
+1
+ 
+(
+
+83023*
+1
+ 
+(
+
+83220*
+1 (
+
+83423*
+1 (
+
+83620*
+1 (
+
+83823*
+1 (
+
+84020*
+1 (
+
+84223*
+1 (
+
+84420*
+1 (	
+
+84623*
+1 (	
+
+485420*
+1 (
+
+485623*
+1 (
+
+485820*
+1 (8
+
+486023*
+1 (
+
+626668*
+1 (
+
+626920*
+1 ('
+
+627123*
+1 (
+
+627320*
+1 (7
+
+627523*
+1 (
+
+627720*
+1 (V
+
+627923*
+1 (
+
+626623*
+1 (
+
+626623*
+1 (
+
+818520*
+1 (
+
+814623*
+1 (
+
+814623*
+1 (
+
+919520*
+1 (
+
+919723*
+1 (
+
+10310920*
+1$ $(
+
+10311123*
+1$ $(
+
+10399113*
+1& &(
+
+10399113*
+1' '(

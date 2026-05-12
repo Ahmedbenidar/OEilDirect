@@ -196,7 +196,7 @@ export default function NouveauRdv() {
                                 <h3 className="text-sm font-semibold text-blue-900 mb-2">Récapitulatif</h3>
                                 <p className="text-sm text-blue-800">🩺 Médecin : <strong>{medecinChoisi?.nom}</strong></p>
                                 <p className="text-sm text-blue-800">📋 Motif : <strong>{motifFinal}</strong></p>
-                                <p className="text-sm text-blue-800">💳 Tarif : <strong>20,00 €</strong> (consultation à distance)</p>
+                                <p className="text-sm text-blue-800">💳 Tarif : <strong>entre 300 et 600 MAD</strong> selon le praticien (consultation)</p>
                             </div>
 
                             {/* Paiement simulé */}

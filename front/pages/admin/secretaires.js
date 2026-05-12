@@ -89,15 +89,23 @@ export default function AdminSecretaires() {
 
             <header className="sticky top-0 z-50 bg-white dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800 shadow-sm">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-5 sm:gap-6 md:gap-8 min-w-0">
+                        <Link href="/admin" className="flex shrink-0 items-center pr-2 sm:pr-3">
+                            <img
+                                src="/logos/logo_cabinet.png"
+                                alt="ŒilDirect"
+                                className="h-10 w-auto max-h-10 object-contain scale-[2] origin-left dark:opacity-95"
+                                style={{ mixBlendMode: 'multiply' }}
+                            />
+                        </Link>
                         <Link href="/admin">
-                            <button className="flex items-center gap-2 text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-100 transition-colors">
+                            <button type="button" className="flex items-center gap-2 px-2 py-1.5 text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-100 transition-colors rounded-lg hover:bg-slate-100/80 dark:hover:bg-slate-800/50">
                                 <span className="material-symbols-outlined text-base">arrow_back</span>
                                 <span className="text-sm font-medium hidden sm:inline">Tableau de bord</span>
                             </button>
                         </Link>
-                        <span className="text-slate-300 dark:text-slate-700">/</span>
-                        <div className="flex items-center gap-2">
+                        <span className="text-slate-300 dark:text-slate-700 px-1 select-none" aria-hidden>/</span>
+                        <div className="flex items-center gap-2.5 pl-0.5">
                             <span className="material-symbols-outlined text-violet-500 text-base">badge</span>
                             <span className="font-bold text-slate-900 dark:text-slate-100 text-sm">Secretaires</span>
                         </div>

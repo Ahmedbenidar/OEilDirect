@@ -1,0 +1,266 @@
+
+1.0ahmedbenidar_testsonarJavaFrontend"1778331588014*java2.B∑
+S
+Nbackend/src/main/java/org/example/backend/repository/DemandeRDVRepository.java2
+	
+type3
+	
+MAIN4
+
+package6
+#
+org.example.backend.repository7
+8
+3org.example.backend.repository.DemandeRDVRepository9
+
+	interface10
+
+access11
+
+public12
+
+
+full-range13
+
+(11:1)-(17:2)14
+
+simple-name15
+
+DemandeRDVRepository16
++
+%Recovered#typeBindingLJpaRepository;018
+
+unknown19
+
+
+implements20
+
+
+Repository22
+
+annotated by23
+(
+"Recovered#typeBindingLRepository;025
+
+
+uses26
+*
+$org.example.backend.model.DemandeRDV28
+Å
+{org.example.backend.repository.DemandeRDVRepository#findByStatut(Lorg/example/backend/model/StatutDemande;)Ljava/util/List;30
+
+method31
+
+(13:5)-(13:57)32
+
+findByStatut33
+-
+'org.example.backend.model.StatutDemande35
+
+	has param36
+
+is type37
+µ
+Æorg.example.backend.repository.DemandeRDVRepository#findByPraticienAndStatut(Lorg/example/backend/model/Utilisateur;Lorg/example/backend/model/StatutDemande;)Ljava/util/List;39
+
+(14:5)-(14:92)40
+
+findByPraticienAndStatut41
++
+%org.example.backend.model.Utilisateur43
+Ä
+zorg.example.backend.repository.DemandeRDVRepository#findByPatient(Lorg/example/backend/model/Utilisateur;)Ljava/util/List;45
+
+(15:5)-(15:57)46
+
+findByPatient47
+Ç
+|org.example.backend.repository.DemandeRDVRepository#findByPraticien(Lorg/example/backend/model/Utilisateur;)Ljava/util/List;49
+
+(16:5)-(16:61)50
+
+findByPraticien51J
+
+1
+12
+
+
+3
+4 Z
+
+5
+5768j˝
+
+17
+171819
+
+21
+212219
+M
+29G
+293031 *
+1 ("28:5B$
+
+
+11
+12
+
+
+13
+32
+
+
+15
+33
+
+42
+424319
+
+27
+272819
+
+24
+242519
+M
+48G
+484931 *
+1 (%28:5B$
+
+
+11
+12
+
+
+13
+50
+
+
+15
+51
+M
+38G
+383931 *
+1 (.28:5B$
+
+
+11
+12
+
+
+13
+40
+
+
+15
+41
+G
+8B
+8910 *
+1 (&:5B$
+
+
+11
+12
+
+
+13
+14
+
+
+15
+16
+M
+44G
+444531 *
+1 (#28:5B$
+
+
+11
+12
+
+
+13
+46
+
+
+15
+47
+
+34
+343519rÉ
+
+81720*
+1/ (N
+
+82123*
+1 (
+
+82426*
+1 (
+
+81726*
+1/ (<
+
+82726*
+1= (G
+
+293436*
+1# (0
+
+292726*
+1
+ (
+
+293437*
+11 (7
+
+293426*
+1# (0
+
+384236*
+1/ (:
+
+383436*
+1F (S
+
+382726*
+1
+ (
+
+384237*
+1; (D
+
+384226*
+1/ (:
+
+383437*
+1T (Z
+
+383426*
+1F (S
+
+444236*
+1$ (/
+
+442726*
+1
+ (
+
+444237*
+10 (7
+
+444226*
+1$ (/
+
+484236*
+1& (1
+
+482726*
+1
+ (
+
+484237*
+12 (;
+
+484226*
+1& (1

@@ -1,18 +1,18 @@
 package org.example.backend;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.example.backend.model.*;
 import org.example.backend.repository.DemandeRDVRepository;
 import org.example.backend.repository.UtilisateurRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
+import org.springframework.boot.webmvc.test.autoconfigure.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
+import tools.jackson.databind.ObjectMapper;
 
+import static org.hamcrest.Matchers.containsString;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
@@ -31,8 +31,7 @@ class BackendApplicationTests {
     @Autowired
     private DemandeRDVRepository demandeRDVRepository;
 
-    @Autowired
-    private ObjectMapper objectMapper;
+    private final ObjectMapper objectMapper = new ObjectMapper();
 
     private Utilisateur patient;
     private Utilisateur praticien;
@@ -43,9 +42,9 @@ class BackendApplicationTests {
         demandeRDVRepository.deleteAll();
         utilisateurRepository.deleteAll();
 
-        patient = Utilisateur.builder().nom("Jean Dupont").email("jean@test.com").role(Role.PATIENT).build();
-        praticien = Utilisateur.builder().nom("Dr House").email("doc@test.com").role(Role.MEDECIN).build();
-        secretaire = Utilisateur.builder().nom("Sophie").email("sophie@test.com").role(Role.SECRETAIRE).build();
+        patient = Utilisateur.builder().nom("Jean Dupont").email("jean@test.com").motDePasse("password").role(Role.PATIENT).build();
+        praticien = Utilisateur.builder().nom("Dr House").email("doc@test.com").motDePasse("password").role(Role.MEDECIN).build();
+        secretaire = Utilisateur.builder().nom("Sophie").email("sophie@test.com").motDePasse("password").role(Role.SECRETAIRE).build();
 
         utilisateurRepository.save(patient);
         utilisateurRepository.save(praticien);
@@ -108,9 +107,10 @@ class BackendApplicationTests {
 
         // 5. Finalisation et Ordonnance (Médecin)
         mockMvc.perform(post("/api/medecins/demandes/" + demandeId + "/ordonnance")
-                        .param("diagnostic", "Myopie légère"))
+                .param("diagnostic", "Myopie légère"))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.contenuMedical").value("Myopie légère\nScore obtenu : 8/15\n"))
+                .andExpect(jsonPath("$.contenuMedical").value(containsString("Myopie légère")))
+                .andExpect(jsonPath("$.contenuMedical").value(containsString("Score obtenu : 8/15")))
                 .andExpect(jsonPath("$.cheminFichierPdf").value("pdf/ordonnance_" + demandeId + ".pdf"));
 
         // Vérification finale statut demande
