@@ -17,10 +17,11 @@ export default function ConnexionSecretaire() {
         setError('');
         setLoading(true);
         try {
-            const user = await fetchApi('/auth/connexion', {
+            const data = await fetchApi('/auth/connexion', {
                 method: 'POST',
                 body: JSON.stringify(form),
             });
+            const user = { ...data.utilisateur, token: data.token };
 
             if (user.role !== 'SECRETAIRE') {
                 setError('Accès refusé. Ce portail est réservé aux secrétaires.');

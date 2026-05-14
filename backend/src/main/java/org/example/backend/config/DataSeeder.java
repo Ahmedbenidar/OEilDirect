@@ -6,6 +6,7 @@ import org.example.backend.model.Utilisateur;
 import org.example.backend.repository.UtilisateurRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -14,6 +15,7 @@ public class DataSeeder implements CommandLineRunner {
 
     private final UtilisateurRepository utilisateurRepository;
     private final JdbcTemplate jdbcTemplate;
+    private final PasswordEncoder passwordEncoder;
 
     @Override
     public void run(String... args) {
@@ -31,21 +33,21 @@ public class DataSeeder implements CommandLineRunner {
             Utilisateur patient = Utilisateur.builder()
                     .nom("Jean Dupont")
                     .email("jean@test.com")
-                    .motDePasse("password")
+                    .motDePasse(passwordEncoder.encode("password"))
                     .role(Role.PATIENT)
                     .build();
 
             Utilisateur medecin = Utilisateur.builder()
                     .nom("Dr House")
                     .email("doc@test.com")
-                    .motDePasse("password")
+                    .motDePasse(passwordEncoder.encode("password"))
                     .role(Role.MEDECIN)
                     .build();
 
             Utilisateur secretaire = Utilisateur.builder()
                     .nom("Sophie Martin")
                     .email("sophie@test.com")
-                    .motDePasse("password")
+                    .motDePasse(passwordEncoder.encode("password"))
                     .role(Role.SECRETAIRE)
                     .build();
 
@@ -60,7 +62,7 @@ public class DataSeeder implements CommandLineRunner {
             Utilisateur admin = Utilisateur.builder()
                     .nom("Admin OeilDirect")
                     .email("admin@test.com")
-                    .motDePasse("admin123")
+                    .motDePasse(passwordEncoder.encode("admin123"))
                     .role(Role.ADMIN)
                     .build();
             utilisateurRepository.save(admin);

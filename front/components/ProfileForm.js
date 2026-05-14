@@ -72,7 +72,9 @@ export default function ProfileForm({ roleRequis }) {
       });
       try {
         const current = getUser();
-        localStorage.setItem('oeildirect_user', JSON.stringify({ ...(current || {}), ...(saved || {}) }));
+        const merged = { ...(current || {}), ...(saved || {}) };
+        if (current?.token) merged.token = current.token;
+        localStorage.setItem('oeildirect_user', JSON.stringify(merged));
       } catch {}
       setOkMsg('Profil mis a jour.');
       setInitialForm({ ...form });

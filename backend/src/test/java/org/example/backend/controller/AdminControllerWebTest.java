@@ -11,11 +11,14 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
+import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -24,6 +27,9 @@ class AdminControllerWebTest {
 
     @Mock
     UtilisateurRepository utilisateurRepository;
+
+    @Mock
+    PasswordEncoder passwordEncoder;
 
     @InjectMocks
     AdminController adminController;
@@ -57,7 +63,8 @@ class AdminControllerWebTest {
 
     @Test
     void creerUtilisateur_ok_retourne201() throws Exception {
-        when(utilisateurRepository.findByEmail("m@test.com")).thenReturn(Optional.empty());
+        when(utilisateurRepository.findByEmailIgnoreCase("m@test.com")).thenReturn(Optional.empty());
+        when(passwordEncoder.encode(anyString())).thenReturn("ENC_pwd");
         when(utilisateurRepository.save(ArgumentMatchers.any(Utilisateur.class))).thenAnswer(inv -> {
             Utilisateur u = inv.getArgument(0);
             u.setId(99L);
@@ -75,6 +82,7 @@ class AdminControllerWebTest {
         assertEquals(HttpStatus.CREATED, res.getStatusCode());
         assertTrue(res.getBody() instanceof Utilisateur);
         assertEquals(Role.MEDECIN, ((Utilisateur) res.getBody()).getRole());
+        verify(passwordEncoder).encode("pwd");
     }
 
     @Test

@@ -1,395 +1,0 @@
-
-1.0ahmedbenidar_testsonarJavaFrontend"1778331593519*java2.B¡
-W
-Rbackend/src/test/java/org/example/backend/controller/MessageControllerWebTest.java2
-	
-type3
-	
-TEST4
-
-package6
-#
-org.example.backend.controller7
-<
-7org.example.backend.controller.MessageControllerWebTest9
-
-class10
-
-access11
-
-	protected12
-
-
-full-range13
-
-(23:1)-(67:2)14
-
-simple-name15
-
-MessageControllerWebTest16
-
-
-ExtendWith18
-
-unknown19
-
-annotated by20
-(
-"Recovered#typeBindingLExtendWith;022
-
-
-uses23
-.
-(Recovered#typeBindingLMockitoExtension;025
-L
-Forg.example.backend.controller.MessageControllerWebTest.messageService27
-
-field28
-
-(26:5)-(27:35)29
-
-messageService30
-
-MessageService32
-
-is type33
-
-
-Mock35
-"
-Recovered#typeBindingLMock;037
-O
-Iorg.example.backend.controller.MessageControllerWebTest.messageController39
-
-(29:5)-(30:41)40
-
-messageController41
-
-MessageController43
-
-InjectMocks45
-)
-#Recovered#typeBindingLInjectMocks;047
-@
-:org.example.backend.controller.MessageControllerWebTest.om49
-
-private50
-
-(32:5)-(32:56)51
-
-om52
-
-ObjectMapper54
-^
-Xorg.example.backend.controller.MessageControllerWebTest#envoyerMessage_ok_retourneMap()V56
-
-method57
-
-(34:5)-(59:6)58
-#
-envoyerMessage_ok_retourneMap59
-
-
-Test61
-"
-Recovered#typeBindingLTest;063
-)
-#Recovered#typeBindingLUtilisateur;065
-%
-Recovered#typeBindingLMessage;067
-
-
-references68
-,
-&Recovered#typeBindingLResponseEntity;070
-P
-Jorg.example.backend.controller.MessageControllerWebTest#conversation_ok()V72
-
-(61:5)-(66:6)73
-
-conversation_ok74J
-
-1
-12
-
-
-3
-4 Z
-
-5
-5768j€
-
-69
-697019
-
-42
-424319
-
-36
-363719
-
-44
-444519
-
-21
-212219
-
-46
-464719
-
-24
-242519
-M
-26G
-262728 *
-1 ("28:5B$
-
-
-11
-12
-
-
-13
-29
-
-
-15
-30
-
-31
-313219
-
-34
-343519
-M
-48G
-484928 *
-1    ("28:5B$
-
-
-11
-50
-
-
-13
-51
-
-
-15
-52
-G
-8B
-8910 *
-1 (:5B$
-
-
-11
-12
-
-
-13
-14
-
-
-15
-16
-
-60
-606119
-
-66
-666719
-
-64
-646519
-
-62
-626319
-M
-38G
-383928 *
-1 ((28:5B$
-
-
-11
-12
-
-
-13
-40
-
-
-15
-41
-M
-55G
-555657 *
-1#
- #('28:5B$
-
-
-11
-12
-
-
-13
-58
-
-
-15
-59
-
-17
-171819
-M
-71G
-717257 *
-1>
- >(28:5B$
-
-
-11
-12
-
-
-13
-73
-
-
-15
-74
-
-53
-535419rë
-
-81720*
-1 ($
-
-82123*
-1 (
-
-82423*
-1 (
-
-263133*
-1 (
-
-263420*
-1 (
-
-
-263623*
-1 (
-
-
-263123*
-1 (
-
-263123*
-1 ("
-
-384233*
-1 (
-
-384420*
-1 (
-
-384623*
-1 (
-
-384223*
-1 (
-
-384223*
-1 ((
-
-485333*
-1   (
-
-485323*
-1   (
-
-485323*
-1    ("
-
-556020*
-1" "(
-
-
-556223*
-1" "(
-
-
-556433*
-1$ $(
-
-556423*
-1$	 $(
-
-556433*
-1% %(
-
-556423*
-1%	 %(
-
-556633*
-1& &(
-
-556623*
-1&	 &(
-
-552668*
-1. .(
-
-553123*
-1. .(
-
-552668*
-1. .(
-
-556933*
-10- 0(0
-
-556923*
-10	 0(
-
-553868*
-103 0(D
-
-554223*
-103 0(D
-
-553868*
-103 0(D
-
-716020*
-1= =(
-
-
-716223*
-1= =(
-
-
-712668*
-1? ?(
-
-713123*
-1? ?(
-
-712668*
-1? ?(
-
-716933*
-1@3 @(6
-
-716923*
-1@	 @(
-
-713868*
-1@9 @(J
-
-714223*
-1@9 @(J
-
-713868*
-1@9 @(J

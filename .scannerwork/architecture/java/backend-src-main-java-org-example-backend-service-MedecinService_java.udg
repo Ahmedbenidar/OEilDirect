@@ -1,916 +1,0 @@
-
-1.0ahmedbenidar_testsonarJavaFrontend"1778331592707*java2.Bû
-J
-Ebackend/src/main/java/org/example/backend/service/MedecinService.java2
-	
-type3
-	
-MAIN4
-
-package6
- 
-org.example.backend.service7
-/
-*org.example.backend.service.MedecinService9
-
-class10
-
-access11
-
-public12
-
-
-full-range13
-
-(21:1)-(122:2)14
-
-simple-name15
-
-MedecinService16
-
-Service18
-
-unknown19
-
-annotated by20
-%
-Recovered#typeBindingLService;022
-
-
-uses23
-
-RequiredArgsConstructor25
-5
-/Recovered#typeBindingLRequiredArgsConstructor;027
-F
-@org.example.backend.service.MedecinService.utilisateurRepository29
-
-field30
-
-private31
-
-(25:5)-(25:63)32
-
-utilisateurRepository33
-:
-4org.example.backend.repository.UtilisateurRepository35
-
-is type36
-E
-?org.example.backend.service.MedecinService.demandeRDVRepository38
-
-(26:5)-(26:61)39
-
-demandeRDVRepository40
-9
-3org.example.backend.repository.DemandeRDVRepository42
-E
-?org.example.backend.service.MedecinService.testVisuelRepository44
-
-(27:5)-(27:61)45
-
-testVisuelRepository46
-9
-3org.example.backend.repository.TestVisuelRepository48
-E
-?org.example.backend.service.MedecinService.ordonnanceRepository50
-
-(28:5)-(28:61)51
-
-ordonnanceRepository52
-9
-3org.example.backend.repository.OrdonnanceRepository54
-i
-corg.example.backend.service.MedecinService#listerDemandesAValider(Ljava/lang/Long;)Ljava/util/List;56
-
-method57
-
-(30:5)-(36:6)58
-
-listerDemandesAValider59
-*
-$org.example.backend.model.DemandeRDV61
-+
-%org.example.backend.model.Utilisateur63
-
-
-references64
-µ
-Æorg.example.backend.repository.DemandeRDVRepository#findByPraticienAndStatut(Lorg/example/backend/model/Utilisateur;Lorg/example/backend/model/StatutDemande;)Ljava/util/List;66
-
-calls67
--
-'org.example.backend.model.StatutDemande69
-@
-:org.example.backend.model.StatutDemande.EN_ATTENTE_MEDECIN71
-a
-[org.example.backend.service.MedecinService#toutesDemandesEnAttenteMedecin()Ljava/util/List;73
-
-(38:5)-(42:6)74
-$
-toutesDemandesEnAttenteMedecin75
-Å
-{org.example.backend.repository.DemandeRDVRepository#findByStatut(Lorg/example/backend/model/StatutDemande;)Ljava/util/List;77
-f
-`org.example.backend.service.MedecinService#listerTestsTermines(Ljava/lang/Long;)Ljava/util/List;79
-
-(44:5)-(50:6)80
-
-listerTestsTermines81
-:
-4org.example.backend.model.StatutDemande.TEST_TERMINE83
-x
-rorg.example.backend.service.MedecinService#getResultatTest(Ljava/lang/Long;)Lorg/example/backend/model/TestVisuel;85
-
-(52:5)-(57:6)86
-
-getResultatTest87
-*
-$org.example.backend.model.TestVisuel89
-
-returns90
-É
-}org.example.backend.repository.TestVisuelRepository#findByDemande(Lorg/example/backend/model/DemandeRDV;)Ljava/util/Optional;92
-=
-7org.example.backend.exception.ResourceNotFoundException94
-g
-aorg.example.backend.service.MedecinService#listerToutesDemandes(Ljava/lang/Long;)Ljava/util/List;96
-
-(59:5)-(63:6)97
-
-listerToutesDemandes98
-É
-|org.example.backend.repository.DemandeRDVRepository#findByPraticien(Lorg/example/backend/model/Utilisateur;)Ljava/util/List;100
-l
-eorg.example.backend.service.MedecinService#listerOrdonnancesMedecin(Ljava/lang/Long;)Ljava/util/List;102
-
-(65:5)-(69:6)103
-
-listerOrdonnancesMedecin104
-+
-$org.example.backend.model.Ordonnance106
-ã
-Éorg.example.backend.repository.OrdonnanceRepository#findByDemandePraticien(Lorg/example/backend/model/Utilisateur;)Ljava/util/List;108
-w
-porg.example.backend.service.MedecinService#prescrireTest(Ljava/lang/Long;)Lorg/example/backend/model/TestVisuel;110
-
-(71:5)-(91:6)111
-
-prescrireTest112
-
-Transactional114
-,
-%Recovered#typeBindingLTransactional;0116
-<
-5org.example.backend.model.StatutDemande.TEST_PRESCRIT118
-†
-òorg.example.backend.service.MedecinService#genererOrdonnance(Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;)Lorg/example/backend/model/Ordonnance;120
-
-(93:5)-(121:6)121
-
-genererOrdonnance122
-B
-;org.example.backend.model.StatutDemande.ORDONNANCE_DELIVREE124J
-
-1
-12
-
-
-3
-4 Z
-
-5
-5768jì
-
-47
-474819
-R
-109K
-10911057 *
-1H H($28:5B&
-
-
-11
-12
-
-13
-111
-
-15
-112
-M
-49G
-495030 *
-1( (<28:5B$
-
-
-11
-31
-
-
-13
-51
-
-
-15
-52
-
-82
-828319
-
-26
-262719
-
-115
-11511619
-M
-84G
-848557 *
-14 4(&28:5B$
-
-
-11
-12
-
-
-13
-86
-
-
-15
-87
-M
-37G
-373830 *
-1( (<28:5B$
-
-
-11
-31
-
-
-13
-39
-
-
-15
-40
-
-105
-10510619
-M
-55G
-555657 *
-1 (328:5B$
-
-
-11
-12
-
-
-13
-58
-
-
-15
-59
-G
-8B
-8910 *
-1 (:5B$
-
-
-11
-12
-
-
-13
-14
-
-
-15
-16
-R
-101K
-10110257 *
-1A A(528:5B&
-
-
-11
-12
-
-13
-103
-
-15
-104
-
-68
-686919
-
-76
-767719
-M
-95G
-959657 *
-1; ;(128:5B$
-
-
-11
-12
-
-
-13
-97
-
-
-15
-98
-
-107
-10710819
-
-21
-212219
-M
-78G
-787957 *
-1, ,(028:5B$
-
-
-11
-12
-
-
-13
-80
-
-
-15
-81
-R
-119K
-11912057 *
-1^ ^((28:5B&
-
-
-11
-12
-
-13
-121
-
-15
-122
-
-17
-171819
-
-99
-9910019
-
-24
-242519
-
-41
-414219
-
-93
-939419
-
-91
-919219
-
-70
-707119
-M
-72G
-727357 *
-1& &(;28:5B$
-
-
-11
-12
-
-
-13
-74
-
-
-15
-75
-
-88
-888919
-
-62
-626319
-
-117
-11711819
-
-60
-606119
-M
-28G
-282930 *
-1) (>28:5B$
-
-
-11
-31
-
-
-13
-32
-
-
-15
-33
-
-34
-343519
-
-53
-535419
-
-65
-656619
-M
-43G
-434430 *
-1( (<28:5B$
-
-
-11
-31
-
-
-13
-45
-
-
-15
-46
-
-123
-12312419
-
-113
-11311419r’ 
-
-81720*
-1 (	
-
-82123*
-1 (	
-
-82420*
-1 (
-
-82623*
-1 (
-
-283436*
-1 ((
-
-283423*
-1 ((
-
-283423*
-1) (>
-
-374136*
-1 ('
-
-374123*
-1 ('
-
-374123*
-1( (<
-
-434736*
-1 ('
-
-434723*
-1 ('
-
-434723*
-1( (<
-
-495336*
-1 ('
-
-495323*
-1 ('
-
-495323*
-1( (<
-
-556023*
-1 (
-
-556236*
-1 (
-
-556223*
-1	 (
-
-552864*
-1 (4
-
-553423*
-1 (4
-
-552864*
-1 (4
-
-556023*
-1! !(
-
-554164*
-1!% !(R
-
-556567*
-1!: !(R
-
-553764*
-1!% !(9
-
-554123*
-1!% !(9
-
-553764*
-1!% !(9
-
-556823*
-1!\ !(i
-
-556823*
-1!j !(|
-
-557064*
-1!j !(|
-
-556023*
-1", "(6
-
-726023*
-1& &(
-
-726023*
-1' '(
-
-724164*
-1'% '(F
-
-727667*
-1': '(F
-
-723764*
-1'% '(9
-
-724123*
-1'% '(9
-
-723764*
-1'% '(9
-
-726823*
-1'G '(T
-
-726823*
-1'U '(g
-
-727064*
-1'U '(g
-
-726023*
-1(, ((6
-
-786023*
-1, ,(
-
-786236*
-1- -(
-
-786223*
-1-	 -(
-
-782864*
-1- -(4
-
-783423*
-1- -(4
-
-782864*
-1- -(4
-
-786023*
-1/ /(
-
-784164*
-1/% /(R
-
-786567*
-1/: /(R
-
-783764*
-1/% /(9
-
-784123*
-1/% /(9
-
-783764*
-1/% /(9
-
-786823*
-1/\ /(i
-
-786823*
-1/j /(v
-
-788264*
-1/j /(v
-
-786023*
-10, 0(6
-
-848890*
-14 4(
-
-848823*
-14 4(
-
-846036*
-15 5(
-
-846023*
-15	 5(
-
-843764*
-15 5(2
-
-844123*
-15 5(2
-
-843764*
-15 5(2
-
-848890*
-17 8(
-
-844764*
-17 7(2
-
-849167*
-17% 7(2
-
-844364*
-17 7($
-
-844723*
-17 7($
-
-844364*
-17 7($
-
-849367*
-18( 8(A
-
-956023*
-1; ;(
-
-956236*
-1< <(
-
-956223*
-1<	 <(
-
-952864*
-1< <(4
-
-953423*
-1< <(4
-
-952864*
-1< <(4
-
-954164*
-1> >(4
-
-959967*
-1>% >(4
-
-953764*
-1> >($
-
-954123*
-1> >($
-
-953764*
-1> >($
-
-10110523*
-1A A(
-
-1016236*
-1B B(
-
-1016223*
-1B	 B(
-
-1012864*
-1B B(4
-
-1013423*
-1B B(4
-
-1012864*
-1B B(4
-
-1015364*
-1D D(;
-
-10110767*
-1D% D(;
-
-1014964*
-1D D($
-
-1015323*
-1D D($
-
-1014964*
-1D D($
-
-1098890*
-1H H(
-
-10911320*
-1G G(
-
-10911523*
-1G G(
-
-1098823*
-1H H(
-
-1096036*
-1I I(
-
-1096023*
-1I	 I(
-
-1093764*
-1I I(2
-
-1094123*
-1I I(2
-
-1093764*
-1I I(2
-
-1096823*
-1L$ L(1
-
-1096823*
-1L2 L(D
-
-1097064*
-1L2 L(D
-
-1098836*
-1P P(
-
-1098823*
-1P	 P(
-
-1098823*
-1P P(%
-
-1096823*
-1W W((
-
-1096823*
-1W) W(6
-
-10911764*
-1W) W(6
-
-1093764*
-1X	 X(
-
-1094123*
-1X	 X(
-
-1093764*
-1X	 X(
-
-1094364*
-1Z Z($
-
-1094723*
-1Z Z($
-
-1094364*
-1Z Z($
-
-11910590*
-1^ ^(
-
-11911320*
-1] ](
-
-11911523*
-1] ](
-
-11910523*
-1^ ^(
-
-1196036*
-1_ _(
-
-1196023*
-1_	 _(
-
-1193764*
-1_ _(2
-
-1194123*
-1_ _(2
-
-1193764*
-1_ _(2
-
-1198836*
-1b b(
-
-1198823*
-1b	 b(
-
-1198890*
-1b c(
-
-1194764*
-1b b(=
-
-1199167*
-1b0 b(=
-
-1194364*
-1b b(/
-
-1194723*
-1b b(/
-
-1194364*
-1b b(/
-
-1199367*
-1c( c(A
-
-1196823*
-1e$ e(1
-
-1196823*
-1e2 e(>
-
-1198264*
-1e2 e(>
-
-11910536*
-1l l(
-
-11910523*
-1l	 l(
-
-11910523*
-1l! l(+
-
-1196823*
-1u u((
-
-1196823*
-1u) u(<
-
-11912364*
-1u) u(<
-
-1193764*
-1v	 v(
-
-1194123*
-1v	 v(
-
-1193764*
-1v	 v(
-
-1194964*
-1x x($
-
-1195323*
-1x x($
-
-1194964*
-1x x($

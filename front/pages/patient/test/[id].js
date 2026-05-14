@@ -453,18 +453,17 @@ export default function TestVisuel() {
         });
         h.onResults(onHandResults); handsRef.current = h;
 
-        // Re-init FaceMesh camera for distance monitoring during test (low freq)
+        // FaceMesh + lunettes : chaque frame pendant le test (réactivité max ; glassCheckBusy cadence l’API)
         if (faceRef.current && window.Camera) {
             const faceCam = new window.Camera(videoRef.current, {
                 onFrame: async () => {
                     frameCountRef.current++;
-                    const n = frameCountRef.current;
                     if (handsRef.current && statusRef.current === 'TESTING')
                         await handsRef.current.send({ image: videoRef.current });
-                    // Distance / lunettes : moins souvent pour garder les mains fluides
-                    if (n % 84 === 0 && faceRef.current && statusRef.current === 'TESTING')
+                    if (faceRef.current && statusRef.current === 'TESTING') {
                         await faceRef.current.send({ image: videoRef.current });
-                    if (n % 140 === 0) checkGlassesML();
+                        checkGlassesML();
+                    }
                 },
                 width: 640,
                 height: 480
@@ -476,7 +475,7 @@ export default function TestVisuel() {
                     frameCountRef.current++;
                     if (statusRef.current === 'TESTING') {
                         if (handsRef.current) await handsRef.current.send({ image: videoRef.current });
-                        if (frameCountRef.current % 140 === 0) checkGlassesML();
+                        checkGlassesML();
                     }
                 },
                 width: 640,
@@ -534,9 +533,10 @@ export default function TestVisuel() {
             const cam = new window.Camera(videoRef.current, {
                 onFrame: async () => {
                     frameCountRef.current++;
-                    if (faceRef.current && (statusRef.current === 'CALIBRATING' || statusRef.current === 'READY'))
+                    if (faceRef.current && (statusRef.current === 'CALIBRATING' || statusRef.current === 'READY')) {
                         await faceRef.current.send({ image: videoRef.current });
-                    if (frameCountRef.current % 48 === 0) checkGlassesML();
+                        checkGlassesML();
+                    }
                 },
                 width: 320, height: 240
             });

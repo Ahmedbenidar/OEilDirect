@@ -24,10 +24,11 @@ export default function Connexion() {
         setError('');
         setLoading(true);
         try {
-            const user = await fetchApi('/auth/connexion', {
+            const data = await fetchApi('/auth/connexion', {
                 method: 'POST',
                 body: JSON.stringify(form),
             });
+            const user = { ...data.utilisateur, token: data.token };
 
             localStorage.setItem('oeildirect_user', JSON.stringify(user));
 

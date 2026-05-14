@@ -1,131 +1,0 @@
-
-1.0ahmedbenidar_testsonarJavaFrontend"1778331592525*java2.Bó
-T
-Obackend/src/main/java/org/example/backend/exception/GlobalExceptionHandler.java2
-	
-type3
-	
-MAIN4
-
-package6
-"
-org.example.backend.exception7
-9
-4org.example.backend.exception.GlobalExceptionHandler9
-
-class10
-
-access11
-
-public12
-
-
-full-range13
-
-(13:1)-(29:2)14
-
-simple-name15
-
-GlobalExceptionHandler16
-
-ControllerAdvice18
-
-unknown19
-
-annotated by20
-.
-(Recovered#typeBindingLControllerAdvice;022
-
-
-uses23
-u
-oorg.example.backend.exception.GlobalExceptionHandler#handleAllExceptions(Ljava/lang/Exception;)LResponseEntity;25
-
-method26
-
-(16:5)-(28:6)27
-
-handleAllExceptions28
-
-ResponseEntity30
-
-returns31
-
-ExceptionHandler33
-.
-(Recovered#typeBindingLExceptionHandler;035J
-
-1
-12
-
-
-3
-4 Z
-
-5
-5768jü
-
-32
-323319
-
-29
-293019
-G
-8B
-8910 *
-1 ($:5B$
-
-
-11
-12
-
-
-13
-14
-
-
-15
-16
-
-21
-212219
-M
-24G
-242526 *
-10 (C28:5B$
-
-
-11
-12
-
-
-13
-27
-
-
-15
-28
-
-34
-343519
-
-17
-171819r 
-
-81720*
-1 (
-
-82123*
-1 (
-
-242931*
-1 (/
-
-243220*
-1 ('
-
-243423*
-1 (
-
-242923*
-1 (

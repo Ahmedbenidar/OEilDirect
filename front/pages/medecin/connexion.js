@@ -17,10 +17,11 @@ export default function ConnexionMedecin() {
         setError('');
         setLoading(true);
         try {
-            const user = await fetchApi('/auth/connexion', {
+            const data = await fetchApi('/auth/connexion', {
                 method: 'POST',
                 body: JSON.stringify(form),
             });
+            const user = { ...data.utilisateur, token: data.token };
 
             if (user.role !== 'MEDECIN') {
                 setError('Accès refusé. Ce portail est réservé aux médecins.');

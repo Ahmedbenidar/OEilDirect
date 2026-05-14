@@ -1,7 +1,0 @@
-organization=ahmedbenidar
-projectKey=ahmedbenidar_testsonar
-serverUrl=https://sonarcloud.io
-serverVersion=8.0.0.86952
-dashboardUrl=https://sonarcloud.io/dashboard?id=ahmedbenidar_testsonar
-ceTaskId=AZ4M06Cte3Pz47ocIGJI
-ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AZ4M06Cte3Pz47ocIGJI

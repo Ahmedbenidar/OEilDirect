@@ -1,108 +1,0 @@
-
-1.0ahmedbenidar_testsonarJavaFrontend"1778331590071*java2.Bß
-F
-Abackend/src/main/java/org/example/backend/BackendApplication.java2
-	
-type3
-	
-MAIN4
-
-package6
-
-org.example.backend7
-+
-&org.example.backend.BackendApplication9
-
-class10
-
-access11
-
-public12
-
-
-full-range13
-
-(6:1)-(13:2)14
-
-simple-name15
-
-BackendApplication16
-
-SpringBootApplication18
-
-unknown19
-
-annotated by20
-3
--Recovered#typeBindingLSpringBootApplication;022
-
-
-uses23
-G
-Aorg.example.backend.BackendApplication#main([Ljava/lang/String;)V25
-
-method26
-
-(9:5)-(11:6)27
-
-
-main28J
-
-1
-12
-
-
-3
-4 Z
-
-5
-5768j¿
-
-17
-171819
-M
-24G
-242526 *
-1	 	(28:5B$
-
-
-11
-12
-
-
-13
-27
-
-
-15
-28
-G
-8B
-8910 *
-1 ( :5B$
-
-
-11
-12
-
-
-13
-14
-
-
-15
-16
-
-21
-212219rN
-
-81720*
-1 (
-
-82123*
-1 (
-
-24823*
-1
- 
-(1

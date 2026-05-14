@@ -1,33 +1,0 @@
-
-norg.example.backend.controller.UtilisateurController#serializeJsonOrNull(Ljava/lang/Object;)Ljava/lang/String;Y
-Obackend\src\main\java\org\example\backend\controller\UtilisateurController.javaV V(&"6*!
-2[ [(:"
-[ [(:
-""*P
-3[ [(<
-:
-[ [(
-%1"__id*"
-
-__unknown_file (
-""*
-2*!
-5X X("
-X X(
-""*Ž
-6W W(w
-u
-W W(
-%0boolean"	__compare*
-W W(
-==*'
-W W(
-
-valuejava.lang.Object*
-W W(
-""*
-3
-5:%
-V' V(3
-valuejava.lang.ObjectB86
-4org.example.backend.controller.UtilisateurController

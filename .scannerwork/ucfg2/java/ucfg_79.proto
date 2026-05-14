@@ -1,48 +1,0 @@
-
-eorg.example.backend.controller.AuthController#normalizePassword(Ljava/lang/String;)Ljava/lang/String;R
-Hbackend\src\main\java\org\example\backend\controller\AuthController.javaI I(+"4*‹
-2J) J(1”‘
-J) J(8
-%3java.lang.String")java.lang.String#trim()Ljava/lang/String;*:
-
-__unknown_file (
-
-passwordjava.lang.String2trim()`
-^
-J) J(8
-%1java.lang.String"__id*4
-
-__unknown_file (
-
-%3java.lang.String*
-1*n
-3J" J(&Z
-X
-J" J(&
-%1java.lang.String"__id*.
-
-__unknown_file (
-
-%2
-<nulltype>*
-1*‘
-4J J(z
-x
-J J(
-%0boolean"	__compare*
-J J(
-==**
-J J(
-
-passwordjava.lang.String*
-J J(
-""*
-2
-3*3
-1J J(9"$
-J J(9
-
-%1java.lang.String:(
-I, I(;
-passwordjava.lang.StringB1"/
--org.example.backend.controller.AuthController

@@ -82,7 +82,9 @@ export default function MedecinDisponibilitesForm() {
       setSavedDatesOff(confirmed);
       try {
         const cur = getUser();
-        localStorage.setItem("oeildirect_user", JSON.stringify({ ...(cur || {}), ...(saved || {}) }));
+        const merged = { ...(cur || {}), ...(saved || {}) };
+        if (cur?.token) merged.token = cur.token;
+        localStorage.setItem("oeildirect_user", JSON.stringify(merged));
       } catch (_) {}
       setOk("Disponibilites enregistrees.");
       if (okTimerRef.current) clearTimeout(okTimerRef.current);

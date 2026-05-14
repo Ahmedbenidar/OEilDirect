@@ -6,6 +6,7 @@ import org.example.backend.model.Utilisateur;
 import org.example.backend.repository.UtilisateurRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -18,6 +19,7 @@ import java.util.Optional;
 public class AdminController {
 
     private final UtilisateurRepository utilisateurRepository;
+    private final PasswordEncoder passwordEncoder;
 
     @GetMapping("/stats")
     public ResponseEntity<Map<String, Long>> getStats() {
@@ -62,7 +64,7 @@ public class AdminController {
         if (nom == null || email == null || motDePasse == null || roleStr == null) {
             return ResponseEntity.badRequest().body(Map.of("erreur", "Champs manquants"));
         }
-        if (utilisateurRepository.findByEmail(email).isPresent()) {
+        if (utilisateurRepository.findByEmailIgnoreCase(email).isPresent()) {
             return ResponseEntity.status(HttpStatus.CONFLICT)
                     .body(Map.of("erreur", "Un compte avec cet email existe deja."));
         }
@@ -80,7 +82,7 @@ public class AdminController {
                 .nom(nom)
                 .prenom(body.get("prenom"))
                 .email(email)
-                .motDePasse(motDePasse)
+                .motDePasse(passwordEncoder.encode(motDePasse))
                 .role(role)
                 .age(age)
                 .specialite(body.get("specialite"))
@@ -107,14 +109,14 @@ public class AdminController {
 
         if (body.containsKey("email") && body.get("email") != null) {
             String newEmail = body.get("email");
-            if (!newEmail.equals(u.getEmail()) && utilisateurRepository.findByEmail(newEmail).isPresent()) {
+            if (!newEmail.equals(u.getEmail()) && utilisateurRepository.findByEmailIgnoreCase(newEmail).isPresent()) {
                 return ResponseEntity.status(HttpStatus.CONFLICT)
                         .body(Map.of("erreur", "Cet email est deja utilise."));
             }
             u.setEmail(newEmail);
         }
         if (body.containsKey("motDePasse") && body.get("motDePasse") != null && !body.get("motDePasse").isBlank()) {
-            u.setMotDePasse(body.get("motDePasse"));
+            u.setMotDePasse(passwordEncoder.encode(body.get("motDePasse")));
         }
 
         return ResponseEntity.ok(utilisateurRepository.save(u));

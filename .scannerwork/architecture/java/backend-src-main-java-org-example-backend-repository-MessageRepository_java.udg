@@ -1,455 +1,0 @@
-
-1.0ahmedbenidar_testsonarJavaFrontend"1778331589362*java2.BÃ
-P
-Kbackend/src/main/java/org/example/backend/repository/MessageRepository.java2
-	
-type3
-	
-MAIN4
-
-package6
-#
-org.example.backend.repository7
-5
-0org.example.backend.repository.MessageRepository9
-
-	interface10
-
-access11
-
-public12
-
-
-full-range13
-
-(12:1)-(32:2)14
-
-simple-name15
-
-MessageRepository16
-+
-%Recovered#typeBindingLJpaRepository;018
-
-unknown19
-
-
-implements20
-
-
-Repository22
-
-annotated by23
-(
-"Recovered#typeBindingLRepository;025
-
-
-uses26
-'
-!org.example.backend.model.Message28
-®
-°org.example.backend.repository.MessageRepository#findConversation(Lorg/example/backend/model/Utilisateur;Lorg/example/backend/model/Utilisateur;)Ljava/util/List;30
-
-method31
-
-(15:5)-(16:94)32
-
-findConversation33
-+
-%org.example.backend.model.Utilisateur35
-
-	has param36
-
-Query38
-#
-Recovered#typeBindingLQuery;040
-
-is type41
-
-Param43
-#
-Recovered#typeBindingLParam;045
-Ñ
-~org.example.backend.repository.MessageRepository#findUnreadByReceiver(Lorg/example/backend/model/Utilisateur;)Ljava/util/List;47
-
-(18:5)-(19:73)48
-
-findUnreadByReceiver49
-µ
-Æorg.example.backend.repository.MessageRepository#findUnreadBySenderAndReceiver(Lorg/example/backend/model/Utilisateur;Lorg/example/backend/model/Utilisateur;)Ljava/util/List;51
-
-(21:5)-(22:119)52
-#
-findUnreadBySenderAndReceiver53
-ç
-Üorg.example.backend.repository.MessageRepository#findContactsWithConversation(Lorg/example/backend/model/Utilisateur;)Ljava/util/List;55
-
-(24:5)-(25:85)56
-"
-findContactsWithConversation57
-¨
-•org.example.backend.repository.MessageRepository#findConversationDesc(Lorg/example/backend/model/Utilisateur;Lorg/example/backend/model/Utilisateur;)Ljava/util/List;59
-
-(27:5)-(28:98)60
-
-findConversationDesc61
-É
-}org.example.backend.repository.MessageRepository#countUnreadBySender(Lorg/example/backend/model/Utilisateur;)Ljava/util/List;63
-
-(30:5)-(31:73)64
-
-countUnreadBySender65J
-
-1
-12
-
-
-3
-4 Z
-
-5
-5768j◊
-
-17
-171819
-
-37
-373819
-M
-46G
-464731 *
-1 ('28:5B$
-
-
-11
-12
-
-
-13
-48
-
-
-15
-49
-M
-54G
-545531 *
-1 (328:5B$
-
-
-11
-12
-
-
-13
-56
-
-
-15
-57
-M
-58G
-585931 *
-1 ('28:5B$
-
-
-11
-12
-
-
-13
-60
-
-
-15
-61
-
-44
-444519
-
-27
-272819
-M
-29G
-293031 *
-1 (#28:5B$
-
-
-11
-12
-
-
-13
-32
-
-
-15
-33
-M
-50G
-505131 *
-1 (028:5B$
-
-
-11
-12
-
-
-13
-52
-
-
-15
-53
-
-21
-212219
-
-34
-343519
-
-42
-424319
-
-24
-242519
-M
-62G
-626331 *
-1 ('28:5B$
-
-
-11
-12
-
-
-13
-64
-
-
-15
-65
-
-39
-394019
-G
-8B
-8910 *
-1 (#:5B$
-
-
-11
-12
-
-
-13
-14
-
-
-15
-16rè
-
-81720*
-1, (H
-
-82123*
-1 (
-
-82426*
-1 (
-
-81726*
-1, (9
-
-82726*
-1: (A
-
-293436*
-11 (<
-
-293436*
-1N (Y
-
-293723*
-1 (î
-
-293926*
-1 (
-
-292726*
-1
- (
-
-293441*
-1= (?
-
-294223*
-1$ (0
-
-294426*
-1% (*
-
-293426*
-11 (<
-
-293441*
-1Z (\
-
-294223*
-1A (M
-
-294426*
-1B (G
-
-293426*
-1N (Y
-
-463436*
-17 (B
-
-463723*
-1 (P
-
-463926*
-1 (
-
-462726*
-1
- (
-
-463441*
-1C (G
-
-464223*
-1( (6
-
-464426*
-1) (.
-
-463426*
-17 (B
-
-503436*
-1B (M
-
-503436*
-1e (p
-
-503723*
-1 (g
-
-503926*
-1 (
-
-502726*
-1
- (
-
-503441*
-1N (T
-
-504223*
-11 (A
-
-504426*
-12 (7
-
-503426*
-1B (M
-
-503441*
-1q (u
-
-504223*
-1V (d
-
-504426*
-1W (\
-
-503426*
-1e (p
-
-543436*
-1C (N
-
-543723*
-1 (ó
-
-543926*
-1 (
-
-543426*
-1
- (
-
-543441*
-1O (S
-
-544223*
-14 (B
-
-544426*
-15 (:
-
-543426*
-1C (N
-
-583436*
-15 (@
-
-583436*
-1R (]
-
-583723*
-1 (ï
-
-583926*
-1 (
-
-582726*
-1
- (
-
-583441*
-1A (C
-
-584223*
-1( (4
-
-584426*
-1) (.
-
-583426*
-15 (@
-
-583441*
-1^ (`
-
-584223*
-1E (Q
-
-584426*
-1F (K
-
-583426*
-1R (]
-
-623436*
-17 (B
-
-623723*
-1 (s
-
-623926*
-1 (
-
-623441*
-1C (G
-
-624223*
-1( (6
-
-624426*
-1) (.
-
-623426*
-17 (B
